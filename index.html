@@ -1,12 +1,2395 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="html-tag">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WanderWish Travels Header</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Dark Mode Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
-  <body>
-    <h1>travels</h1>
-    <h2>hello</h2>
+
+  <body
+    class="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors"
+  >
+    <header
+      class="w-full border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800"
+    >
+      <div
+        class="max-w-[1300px] mx-auto h-[70px] flex items-center justify-between px-12"
+      >
+        <!-- Logo -->
+        <div class="logo-wrapper flex-shrink-0">
+          <div class="relative">
+            <div
+              class="text-[25px] font-bold text-[#5e2bff] tracking-tight leading-none"
+            >
+              wanderwish<span
+                class="text-[14px] text-gray-500 dark:text-gray-400 font-normal"
+                >travels</span
+              >
+            </div>
+
+            <div class="flex items-center gap-1 mt-1">
+              <span class="w-6 h-[2px] bg-orange-500"></span>
+              <span class="text-[10px] italic text-gray-500 dark:text-gray-400">
+                Travel with Wisdom
+              </span>
+              <span class="w-6 h-[2px] bg-green-600"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="main-navigation flex items-center gap-8">
+          <nav class="flex items-center gap-6">
+            <!-- EMTMate -->
+            <a href="#" class="group flex flex-col py-1">
+              <div class="flex items-center gap-1">
+                <svg
+                  class="w-[15px] h-[15px] flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle
+                    cx="12"
+                    cy="7"
+                    r="4"
+                    class="text-gray-700 dark:text-gray-300"
+                  />
+                  <path
+                    d="M5.5 21v-2a6 6 0 0 1 13 0v2"
+                    class="text-gray-700 dark:text-gray-300"
+                  />
+                  <path
+                    d="M12 11l-1 4 1 1.5 1-1.5z"
+                    fill="#5e2bff"
+                    stroke="#5e2bff"
+                    stroke-width="0.5"
+                  />
+                </svg>
+                <span
+                  class="text-[13px] font-bold text-gray-700 dark:text-gray-300 leading-none"
+                  >EMTMate</span
+                >
+              </div>
+              <span
+                class="text-[10px] text-gray-500 dark:text-gray-400 leading-tight whitespace-nowrap mt-1"
+                >Agent travel solution</span
+              >
+            </a>
+
+            <!-- EMTDesk -->
+            <a href="#" class="group flex flex-col py-1">
+              <div class="flex items-center gap-1">
+                <svg
+                  class="w-[15px] h-[15px] flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect
+                    x="2"
+                    y="7"
+                    width="20"
+                    height="14"
+                    rx="2"
+                    class="text-gray-700 dark:text-gray-300"
+                  />
+                  <path
+                    d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"
+                    class="text-gray-700 dark:text-gray-300"
+                  />
+                  <rect
+                    x="10"
+                    y="11"
+                    width="4"
+                    height="3"
+                    rx="0.5"
+                    fill="#5e2bff"
+                    stroke="#5e2bff"
+                    stroke-width="0.5"
+                  />
+                </svg>
+                <span
+                  class="text-[13px] font-bold text-gray-700 dark:text-gray-300 leading-none"
+                  >EMTDesk</span
+                >
+              </div>
+              <span
+                class="text-[10px] text-gray-500 dark:text-gray-400 leading-tight whitespace-nowrap mt-1"
+                >Corporate travel program</span
+              >
+            </a>
+
+            <!-- EMTRoyale -->
+            <a href="#" class="group flex flex-col py-1">
+              <div class="flex items-center gap-1">
+                <svg
+                  class="w-[15px] h-[15px] flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M6 3h12l4 6-10 12L2 9z"
+                    class="text-gray-700 dark:text-gray-300"
+                  />
+                  <path
+                    d="M11 3l1 6 1-6"
+                    class="text-gray-700 dark:text-gray-300"
+                  />
+                  <path
+                    d="M8 3l4 3 4-3"
+                    fill="#5e2bff"
+                    stroke="#5e2bff"
+                    stroke-width="0.8"
+                  />
+                </svg>
+                <span
+                  class="text-[13px] font-bold text-gray-700 dark:text-gray-300 leading-none"
+                  >EMTRoyale</span
+                >
+              </div>
+              <span
+                class="text-[10px] text-gray-500 dark:text-gray-400 leading-tight whitespace-nowrap mt-1"
+                >For Prime Members</span
+              >
+            </a>
+
+            <!-- Explore Bharat -->
+            <a href="#" class="group flex flex-col py-1">
+              <div class="flex items-center gap-1">
+                <svg
+                  class="w-[15px] h-[15px] flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M17.8 19.2L16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a1 1 0 0 0-1.1.4l-.3.5a1 1 0 0 0 .2 1.2l4.8 3.7-2.3 2.3-2.5-.6a1 1 0 0 0-1.1.4l-.2.4a1 1 0 0 0 .3 1.1l3 2.2 2.2 3a1 1 0 0 0 1.1.3l.4-.2a1 1 0 0 0 .4-1.1l-.6-2.5 2.3-2.3 3.7 4.8a1 1 0 0 0 1.2.2l.5-.3a1 1 0 0 0 .4-1.1z"
+                    class="text-gray-700 dark:text-gray-300"
+                  />
+                  <path d="M6 16l2 3-1 2" stroke="#5e2bff" stroke-width="2" />
+                </svg>
+                <span
+                  class="text-[13px] font-bold text-gray-700 dark:text-gray-300 leading-none"
+                  >Explore Bharat</span
+                >
+              </div>
+              <span
+                class="text-[10px] text-gray-500 dark:text-gray-400 leading-tight whitespace-nowrap mt-1"
+                >A Tour to India</span
+              >
+            </a>
+
+            <!-- Join EMTPro -->
+            <a href="#" class="relative group flex flex-col py-1">
+              <span
+                class="absolute -top-2.5 right-0 bg-pink-500 text-white text-[8px] px-1.5 py-[0.5px] rounded-full font-bold z-10"
+                >NEW</span
+              >
+              <div class="flex items-center gap-1">
+                <svg
+                  class="w-[15px] h-[15px] flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M2 4l3 12h14l3-12-6 7-4-5-4 5-6-7z"
+                    class="text-gray-700 dark:text-gray-300"
+                  />
+                  <path d="M3 20h18" class="text-gray-700 dark:text-gray-300" />
+                  <circle
+                    cx="12"
+                    cy="11"
+                    r="1.5"
+                    fill="#5e2bff"
+                    stroke="#5e2bff"
+                  />
+                </svg>
+                <span
+                  class="text-[13px] font-bold text-gray-700 dark:text-gray-300 leading-none"
+                  >Join EMTPro</span
+                >
+              </div>
+              <span
+                class="text-[10px] text-gray-500 dark:text-gray-400 leading-tight whitespace-nowrap mt-1"
+                >Enjoy More Benefits</span
+              >
+            </a>
+          </nav>
+
+          <!-- Right Side Vertical Layout -->
+          <div class="flex flex-col items-center gap-1.5">
+            <!-- Top Row Icons -->
+            <div class="flex items-center gap-3">
+              <!-- Headphones Hover Dropdown Container -->
+              <div class="relative group py-1">
+                <button
+                  class="flex items-center gap-0.5 text-gray-700 dark:text-gray-300 hover:text-[#5e2bff] transition-colors"
+                >
+                  <i data-lucide="headphones" class="w-[16px] h-[16px]"></i>
+                  <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                </button>
+
+                <!-- Support Dropdown Card -->
+                <div
+                  class="absolute right-0 top-full pt-2 hidden group-hover:block z-50 min-w-[280px]"
+                >
+                  <div
+                    class="bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-100 dark:border-gray-600 p-4 space-y-3"
+                  >
+                    <!-- Call Support -->
+                    <div class="flex items-center gap-3.5">
+                      <div
+                        class="w-10 h-10 rounded-2xl bg-emerald-50 dark:bg-emerald-900/40 border border-emerald-100/60 dark:border-emerald-700/50 flex items-center justify-center flex-shrink-0"
+                      >
+                        <i
+                          data-lucide="phone-call"
+                          class="w-5 h-5 text-emerald-600 dark:text-emerald-400"
+                        ></i>
+                      </div>
+                      <div class="flex flex-col">
+                        <span
+                          class="text-[14px] font-bold text-gray-700 dark:text-gray-200 leading-snug"
+                          >Call Support</span
+                        >
+                        <a
+                          href="tel:01143131313"
+                          class="text-[12px] font-medium text-[#1082e6] hover:underline tracking-tight"
+                          >Tel : 011 - 43131313, 43030303</a
+                        >
+                      </div>
+                    </div>
+
+                    <div
+                      class="h-[1px] bg-gray-100 dark:bg-gray-600 w-full"
+                    ></div>
+
+                    <!-- Mail Support -->
+                    <div class="flex items-center gap-3.5">
+                      <div
+                        class="w-10 h-10 rounded-2xl bg-red-50 dark:bg-red-900/40 border border-red-100/60 dark:border-red-700/50 flex items-center justify-center flex-shrink-0"
+                      >
+                        <i
+                          data-lucide="mail"
+                          class="w-5 h-5 text-red-500 dark:text-red-400"
+                        ></i>
+                      </div>
+                      <div class="flex flex-col">
+                        <span
+                          class="text-[14px] font-bold text-gray-700 dark:text-gray-200 leading-snug"
+                          >Mail Support</span
+                        >
+                        <a
+                          href="mailto:Care@easemytrip.com"
+                          class="text-[12px] font-medium text-[#1082e6] hover:underline tracking-tight"
+                          >Care@easemytrip.com</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Country/Language Selector Container -->
+              <div class="relative group py-1">
+                <button
+                  class="flex items-center gap-1 text-[12px] font-semibold text-gray-700 dark:text-gray-300 hover:text-[#5e2bff] transition-colors"
+                >
+                  <svg
+                    class="w-4 h-3 rounded-[1px] border border-gray-200 shadow-2xs"
+                    viewBox="0 0 640 480"
+                  >
+                    <path fill="#f93" d="M0 0h640v160H0z" />
+                    <path fill="#fff" d="M0 160h640v160H0z" />
+                    <path fill="#128807" d="M0 320h640v160H0z" />
+                    <circle
+                      cx="320"
+                      cy="240"
+                      r="60"
+                      fill="none"
+                      stroke="#008"
+                      stroke-width="12"
+                    />
+                  </svg>
+                  <span>India</span>
+                  <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                </button>
+
+                <!-- Dropdown Card -->
+                <div
+                  class="absolute right-0 top-full pt-2 hidden group-hover:block z-50 min-w-[340px]"
+                >
+                  <div
+                    class="bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-200/80 dark:border-gray-600 p-4 space-y-4 text-left"
+                  >
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="flex flex-col gap-1.5">
+                        <label
+                          class="text-[11px] font-bold text-gray-500 dark:text-gray-400"
+                          >Choose Country</label
+                        >
+                        <div
+                          class="relative border border-gray-300 dark:border-gray-500 rounded-lg p-2 flex items-center justify-between cursor-pointer bg-white dark:bg-gray-600"
+                        >
+                          <div class="flex items-center gap-2">
+                            <svg
+                              class="w-4 h-3 rounded-[1px]"
+                              viewBox="0 0 640 480"
+                            >
+                              <path fill="#f93" d="M0 0h640v160H0z" />
+                              <path fill="#fff" d="M0 160h640v160H0z" />
+                              <path fill="#128807" d="M0 320h640v160H0z" />
+                              <circle
+                                cx="320"
+                                cy="240"
+                                r="60"
+                                fill="none"
+                                stroke="#008"
+                                stroke-width="12"
+                              />
+                            </svg>
+                            <span
+                              class="text-[13px] font-bold text-gray-700 dark:text-gray-200"
+                              >India</span
+                            >
+                          </div>
+                          <i
+                            data-lucide="chevron-down"
+                            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                          ></i>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col gap-1.5">
+                        <label
+                          class="text-[11px] font-bold text-gray-500 dark:text-gray-400"
+                          >Choose Currency</label
+                        >
+                        <div
+                          class="relative border border-gray-300 dark:border-gray-500 rounded-lg p-2 flex items-center justify-between cursor-pointer bg-white dark:bg-gray-600"
+                        >
+                          <span
+                            class="text-[13px] font-bold text-gray-700 dark:text-gray-200 px-1"
+                            >INR</span
+                          >
+                          <i
+                            data-lucide="chevron-down"
+                            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="h-[1px] bg-gray-100 dark:bg-gray-600 w-full"
+                    ></div>
+
+                    <div class="flex flex-col gap-2">
+                      <label
+                        class="text-[11px] font-bold text-gray-500 dark:text-gray-400"
+                        >Choose Language</label
+                      >
+                      <div class="grid grid-cols-3 gap-2">
+                        <label
+                          class="border border-gray-200 dark:border-gray-500 rounded-lg p-2 flex items-center gap-2 cursor-pointer bg-white dark:bg-gray-600"
+                        >
+                          <input
+                            type="radio"
+                            name="language"
+                            checked
+                            class="w-3.5 h-3.5 text-[#5e2bff] accent-[#5e2bff]"
+                          />
+                          <span
+                            class="text-[12px] font-bold text-gray-700 dark:text-gray-200"
+                            >English</span
+                          >
+                        </label>
+                        <label
+                          class="border border-gray-200 dark:border-gray-500 rounded-lg p-2 flex items-center gap-2 cursor-pointer bg-white dark:bg-gray-600"
+                        >
+                          <input
+                            type="radio"
+                            name="language"
+                            class="w-3.5 h-3.5 text-[#5e2bff] accent-[#5e2bff]"
+                          />
+                          <span
+                            class="text-[12px] font-bold text-gray-700 dark:text-gray-200"
+                            >Hindi</span
+                          >
+                        </label>
+                        <label
+                          class="border border-gray-200 dark:border-gray-500 rounded-lg p-2 flex items-center gap-2 cursor-pointer bg-white dark:bg-gray-600"
+                        >
+                          <input
+                            type="radio"
+                            name="language"
+                            class="w-3.5 h-3.5 text-[#5e2bff] accent-[#5e2bff]"
+                          />
+                          <span
+                            class="text-[12px] font-bold text-gray-700 dark:text-gray-200"
+                            >Assamese</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dark Mode / Moon Icon -->
+              <button
+                id="theme-toggle"
+                title="Toggle Dark Mode"
+                class="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              >
+                <i
+                  data-lucide="moon"
+                  class="w-[16px] h-[16px] text-gray-700 dark:text-gray-300"
+                ></i>
+              </button>
+            </div>
+
+            <!-- Bottom Login/Signup Button -->
+            <button
+              class="bg-[#5e2bff] hover:bg-[#4b22cb] text-white text-[13px] font-semibold px-5 py-1.5 rounded-full transition duration-200 shadow-sm"
+            >
+              Login or Signup
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Service Category Navigation Bar -->
+    <nav
+      class="w-full bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 py-2 transition-colors"
+    >
+      <div class="max-w-[1300px] mx-auto px-12 flex justify-start">
+        <div
+          class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5"
+        >
+          <!-- Flights (Active State - Light Blue Pill) -->
+          <a
+            href="#"
+            class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md bg-[#e8f2fe] text-[#002d62] font-bold text-[15px] flex-shrink-0"
+          >
+            <i
+              data-lucide="plane"
+              class="w-4 h-4 fill-[#0a66c2] text-[#0a66c2]"
+            ></i>
+            <span>Flights</span>
+          </a>
+
+          <!-- Hotels -->
+          <a
+            href="#"
+            class="flex items-center gap-1.5 px-2.5 py-1.5 text-[#002d62] dark:text-gray-200 font-bold text-[15px] hover:text-[#0a66c2] transition-colors flex-shrink-0"
+          >
+            <i
+              data-lucide="building-2"
+              class="w-4 h-4 text-gray-700 dark:text-gray-300"
+            ></i>
+            <span>Hotels</span>
+          </a>
+
+          <!-- Trains -->
+          <a
+            href="#"
+            class="flex items-center gap-1.5 px-2.5 py-1.5 text-[#002d62] dark:text-gray-200 font-bold text-[15px] hover:text-[#0a66c2] transition-colors flex-shrink-0"
+          >
+            <i
+              data-lucide="train-front"
+              class="w-4 h-4 text-gray-700 dark:text-gray-300"
+            ></i>
+            <span>Trains</span>
+          </a>
+
+          <!-- Bus -->
+          <a
+            href="#"
+            class="flex items-center gap-1.5 px-2.5 py-1.5 text-[#002d62] dark:text-gray-200 font-bold text-[15px] hover:text-[#0a66c2] transition-colors flex-shrink-0"
+          >
+            <i
+              data-lucide="bus"
+              class="w-4 h-4 text-gray-700 dark:text-gray-300"
+            ></i>
+            <span>Bus</span>
+          </a>
+
+          <!-- Holidays -->
+          <a
+            href="#"
+            class="flex items-center gap-1.5 px-2.5 py-1.5 text-[#002d62] dark:text-gray-200 font-bold text-[15px] hover:text-[#0a66c2] transition-colors flex-shrink-0"
+          >
+            <i
+              data-lucide="palmtree"
+              class="w-4 h-4 text-gray-700 dark:text-gray-300"
+            ></i>
+            <span>Holidays</span>
+          </a>
+
+          <!-- Cabs -->
+          <a
+            href="#"
+            class="flex items-center gap-1.5 px-2.5 py-1.5 text-[#002d62] dark:text-gray-200 font-bold text-[15px] hover:text-[#0a66c2] transition-colors flex-shrink-0"
+          >
+            <i
+              data-lucide="car"
+              class="w-4 h-4 text-gray-700 dark:text-gray-300"
+            ></i>
+            <span>Cabs</span>
+          </a>
+
+          <!-- Activities (Updated Working Lucide Icon) -->
+          <a
+            href="#"
+            class="flex items-center gap-1.5 px-2.5 py-1.5 text-[#002d62] dark:text-gray-200 font-bold text-[15px] hover:text-[#0a66c2] transition-colors flex-shrink-0"
+          >
+            <i
+              data-lucide="ticket"
+              class="w-4 h-4 text-gray-700 dark:text-gray-300"
+            ></i>
+            <span>Activities</span>
+          </a>
+
+          <!-- Visa -->
+          <a
+            href="#"
+            class="flex items-center gap-1.5 px-2.5 py-1.5 text-[#002d62] dark:text-gray-200 font-bold text-[15px] hover:text-[#0a66c2] transition-colors flex-shrink-0"
+          >
+            <i
+              data-lucide="book-open"
+              class="w-4 h-4 text-gray-700 dark:text-gray-300"
+            ></i>
+            <span>Visa</span>
+          </a>
+
+          <!-- More -->
+          <a
+            href="#"
+            class="flex items-center gap-1.5 px-2.5 py-1.5 text-[#002d62] dark:text-gray-200 font-bold text-[15px] hover:text-[#0a66c2] transition-colors flex-shrink-0"
+          >
+            <i
+              data-lucide="ellipsis"
+              class="w-4 h-4 text-gray-700 dark:text-gray-300"
+            ></i>
+            <span>More</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!--Hero Section Start-->
+    <div class="w-full bg-[#5e2bff] p-6 font-sans text-white">
+      <div class="max-w-[1200px] mx-auto space-y-3">
+        <div class="flex items-center gap-2 pb-1">
+          <button
+            type="button"
+            class="bg-white text-[#5e2bff] font-bold text-[14px] px-5 py-1 rounded-full shadow-sm hover:bg-opacity-95 transition-all"
+          >
+            Tour Packages
+          </button>
+          <button
+            type="button"
+            class="text-white font-bold text-[14px] px-4 py-1 hover:text-white/80 transition-colors"
+          >
+            Car Rental
+          </button>
+          <button
+            type="button"
+            class="text-white font-bold text-[14px] px-4 py-1 hover:text-white/80 transition-colors"
+          >
+            Hotels
+          </button>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col lg:flex-row items-stretch text-gray-800 relative"
+        >
+          <div
+            class="flex-1 min-w-0 p-3.5 px-5 border-b lg:border-b-0 lg:border-r border-gray-200 relative flex flex-col justify-between"
+          >
+            <span
+              class="text-[12px] font-bold text-gray-400 uppercase tracking-wider"
+              >STARTING FROM</span
+            >
+            <div
+              class="text-[24px] font-black text-black leading-tight my-0.5 truncate"
+            >
+              Siliguri
+            </div>
+            <div class="text-[12px] text-gray-500 font-medium truncate">
+              [IXB] Bagdogra / NJP / Siliguri Town
+            </div>
+          </div>
+
+          <div
+            class="flex-1 min-w-0 p-3.5 px-5 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col justify-between"
+          >
+            <span
+              class="text-[12px] font-bold text-gray-400 uppercase tracking-wider"
+              >DESTINATION</span
+            >
+            <div
+              class="text-[24px] font-black text-black leading-tight my-0.5 truncate"
+            >
+              Gangtok
+            </div>
+            <div class="text-[12px] text-gray-500 font-medium truncate">
+              Sikkim, North Sikkim, Pelling, Bhutan...
+            </div>
+          </div>
+
+          <div
+            onclick="toggleCalendar(event)"
+            class="w-full lg:w-[165px] p-3.5 px-4 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col justify-between flex-shrink-0 cursor-pointer relative hover:bg-slate-50 transition-colors select-none"
+          >
+            <span
+              class="text-[12px] font-bold text-gray-400 uppercase tracking-wider"
+              >TRAVEL DATE</span
+            >
+            <div class="flex items-baseline justify-between my-0.5">
+              <div class="flex items-baseline gap-1">
+                <span
+                  id="dep_day_display"
+                  class="text-[24px] font-black text-black leading-none"
+                  >15</span
+                >
+                <span
+                  id="dep_month_display"
+                  class="text-[14px] font-bold text-black"
+                  >Oct'2026</span
+                >
+              </div>
+              <i data-lucide="calendar" class="w-4 h-4 text-gray-300"></i>
+            </div>
+            <div
+              id="dep_weekday_display"
+              class="text-[12px] text-gray-500 font-medium"
+            >
+              Thursday
+            </div>
+
+            <input
+              type="date"
+              id="departure_input"
+              class="sr-only"
+              onchange="updateDepartureDate(this.value)"
+            />
+
+            <!-- ================= CUSTOM CALENDAR POPUP ================= -->
+            <div
+              id="custom_calendar_popup"
+              onclick="event.stopPropagation()"
+              class="hidden absolute top-full left-0 lg:-left-20 mt-3 z-50 bg-white text-gray-800 p-6 rounded-2xl shadow-2xl border border-gray-100 w-[340px] md:w-[650px] cursor-default"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- SEP 2026 -->
+                <div>
+                  <div
+                    class="text-center font-bold text-gray-800 text-[16px] mb-4"
+                  >
+                    SEP 2026
+                  </div>
+                  <div
+                    class="grid grid-cols-7 text-center text-[12px] font-bold text-gray-400 mb-2"
+                  >
+                    <div>Su</div>
+                    <div>Mo</div>
+                    <div>Tu</div>
+                    <div>We</div>
+                    <div>Th</div>
+                    <div>Fr</div>
+                    <div>Sa</div>
+                  </div>
+                  <div
+                    class="grid grid-cols-7 text-center text-[13px] font-semibold gap-y-1"
+                  >
+                    <div class="py-1.5 text-gray-300"></div>
+                    <div class="py-1.5 text-gray-300">1</div>
+                    <div class="py-1.5 text-gray-300">2</div>
+                    <div class="py-1.5 text-gray-300">3</div>
+                    <div class="py-1.5 text-gray-300">4</div>
+                    <div class="py-1.5 text-gray-300">5</div>
+                    <div
+                      class="py-1.5 bg-[#5e2bff] text-white rounded-lg font-bold shadow-md cursor-pointer"
+                    >
+                      6
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(7, 'Sep\'2026', 'Monday')"
+                    >
+                      7
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(8, 'Sep\'2026', 'Tuesday')"
+                    >
+                      8
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(9, 'Sep\'2026', 'Wednesday')"
+                    >
+                      9
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(10, 'Sep\'2026', 'Thursday')"
+                    >
+                      10
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(11, 'Sep\'2026', 'Friday')"
+                    >
+                      11
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(12, 'Sep\'2026', 'Saturday')"
+                    >
+                      12
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(13, 'Sep\'2026', 'Sunday')"
+                    >
+                      13
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(14, 'Sep\'2026', 'Monday')"
+                    >
+                      14
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(15, 'Sep\'2026', 'Tuesday')"
+                    >
+                      15
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(16, 'Sep\'2026', 'Wednesday')"
+                    >
+                      16
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(17, 'Sep\'2026', 'Thursday')"
+                    >
+                      17
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(18, 'Sep\'2026', 'Friday')"
+                    >
+                      18
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(19, 'Sep\'2026', 'Saturday')"
+                    >
+                      19
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(20, 'Sep\'2026', 'Sunday')"
+                    >
+                      20
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(21, 'Sep\'2026', 'Monday')"
+                    >
+                      21
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(22, 'Sep\'2026', 'Tuesday')"
+                    >
+                      22
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(23, 'Sep\'2026', 'Wednesday')"
+                    >
+                      23
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(24, 'Sep\'2026', 'Thursday')"
+                    >
+                      24
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(25, 'Sep\'2026', 'Friday')"
+                    >
+                      25
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(26, 'Sep\'2026', 'Saturday')"
+                    >
+                      26
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(27, 'Sep\'2026', 'Sunday')"
+                    >
+                      27
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(28, 'Sep\'2026', 'Monday')"
+                    >
+                      28
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(29, 'Sep\'2026', 'Tuesday')"
+                    >
+                      29
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(30, 'Sep\'2026', 'Wednesday')"
+                    >
+                      30
+                    </div>
+                  </div>
+                </div>
+                <!-- OCT 2026 -->
+                <div class="hidden md:block">
+                  <div
+                    class="flex items-center justify-between font-bold text-gray-800 text-[16px] mb-4 px-2"
+                  >
+                    <span class="w-full text-center">OCT 2026</span>
+                    <i
+                      data-lucide="chevron-right"
+                      class="w-5 h-5 text-gray-400 cursor-pointer hover:text-black"
+                    ></i>
+                  </div>
+                  <div
+                    class="grid grid-cols-7 text-center text-[12px] font-bold text-gray-400 mb-2"
+                  >
+                    <div>Su</div>
+                    <div>Mo</div>
+                    <div>Tu</div>
+                    <div>We</div>
+                    <div>Th</div>
+                    <div>Fr</div>
+                    <div>Sa</div>
+                  </div>
+                  <div
+                    class="grid grid-cols-7 text-center text-[13px] font-semibold gap-y-1"
+                  >
+                    <div class="py-1.5 text-gray-300"></div>
+                    <div class="py-1.5 text-gray-300"></div>
+                    <div class="py-1.5 text-gray-300"></div>
+                    <div class="py-1.5 text-gray-300"></div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(1, 'Oct\'2026', 'Thursday')"
+                    >
+                      1
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(2, 'Oct\'2026', 'Friday')"
+                    >
+                      2
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(3, 'Oct\'2026', 'Saturday')"
+                    >
+                      3
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(4, 'Oct\'2026', 'Sunday')"
+                    >
+                      4
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(5, 'Oct\'2026', 'Monday')"
+                    >
+                      5
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(6, 'Oct\'2026', 'Tuesday')"
+                    >
+                      6
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(7, 'Oct\'2026', 'Wednesday')"
+                    >
+                      7
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(8, 'Oct\'2026', 'Thursday')"
+                    >
+                      8
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(9, 'Oct\'2026', 'Friday')"
+                    >
+                      9
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(10, 'Oct\'2026', 'Saturday')"
+                    >
+                      10
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(11, 'Oct\'2026', 'Sunday')"
+                    >
+                      11
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(12, 'Oct\'2026', 'Monday')"
+                    >
+                      12
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(13, 'Oct\'2026', 'Tuesday')"
+                    >
+                      13
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(14, 'Oct\'2026', 'Wednesday')"
+                    >
+                      14
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(15, 'Oct\'2026', 'Thursday')"
+                    >
+                      15
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(16, 'Oct\'2026', 'Friday')"
+                    >
+                      16
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(17, 'Oct\'2026', 'Saturday')"
+                    >
+                      17
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(18, 'Oct\'2026', 'Sunday')"
+                    >
+                      18
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(19, 'Oct\'2026', 'Monday')"
+                    >
+                      19
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(20, 'Oct\'2026', 'Tuesday')"
+                    >
+                      20
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(21, 'Oct\'2026', 'Wednesday')"
+                    >
+                      21
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(22, 'Oct\'2026', 'Thursday')"
+                    >
+                      22
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(23, 'Oct\'2026', 'Friday')"
+                    >
+                      23
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(24, 'Oct\'2026', 'Saturday')"
+                    >
+                      24
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(25, 'Oct\'2026', 'Sunday')"
+                    >
+                      25
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(26, 'Oct\'2026', 'Monday')"
+                    >
+                      26
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(27, 'Oct\'2026', 'Tuesday')"
+                    >
+                      27
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(28, 'Oct\'2026', 'Wednesday')"
+                    >
+                      28
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(29, 'Oct\'2026', 'Thursday')"
+                    >
+                      29
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(30, 'Oct\'2026', 'Friday')"
+                    >
+                      30
+                    </div>
+                    <div
+                      class="py-1.5 hover:bg-violet-50 rounded-lg cursor-pointer transition-colors"
+                      onclick="selectDate(31, 'Oct\'2026', 'Saturday')"
+                    >
+                      31
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-end gap-4 text-[12px] text-gray-500 font-medium"
+              >
+                <span class="flex items-center gap-1.5"
+                  ><span class="w-3 h-1 bg-[#5e2bff] rounded-full"></span>
+                  Cheapest</span
+                >
+                <span class="flex items-center gap-1.5"
+                  ><span class="w-3 h-1 bg-red-500 rounded-full"></span>
+                  Highest</span
+                >
+                <span class="flex items-center gap-1.5"
+                  ><span class="w-3 h-1 bg-gray-300 rounded-full"></span>
+                  Average</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="w-full lg:w-[165px] p-3.5 px-4 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col justify-between flex-shrink-0 relative cursor-pointer hover:bg-slate-50 transition-colors select-none"
+          >
+            <span
+              class="text-[12px] font-bold text-gray-400 uppercase tracking-wider"
+              >DURATION</span
+            >
+            <div class="flex items-baseline justify-between my-0.5">
+              <div class="flex items-baseline gap-1">
+                <span class="text-[24px] font-black text-black leading-none"
+                  >5</span
+                >
+                <span class="text-[14px] font-bold text-black">Nights</span>
+              </div>
+            </div>
+            <div class="text-[12px] text-gray-500 font-medium">6 Days Tour</div>
+          </div>
+
+          <div
+            class="group w-full lg:w-[175px] p-3.5 px-4 border-b lg:border-b-0 border-gray-200 flex flex-col justify-between flex-shrink-0 relative cursor-pointer hover:bg-slate-50 transition-colors select-none"
+          >
+            <span
+              class="text-[12px] font-bold text-gray-400 uppercase tracking-wider"
+              >GUESTS & ROOM</span
+            >
+            <div class="flex items-center justify-between my-0.5">
+              <div class="flex items-baseline gap-1">
+                <span
+                  id="traveller_count_display"
+                  class="text-[24px] font-black text-black leading-none"
+                  >2</span
+                >
+                <span class="text-[14px] font-bold text-black">Persons</span>
+              </div>
+              <i
+                data-lucide="chevron-down"
+                class="w-4 h-4 text-black font-bold"
+              ></i>
+            </div>
+            <div
+              id="class_display"
+              class="text-[12px] text-gray-500 font-medium"
+            >
+              1 Room / Family
+            </div>
+
+            <div
+              class="hidden group-hover:block absolute top-full right-0 lg:left-0 pt-2 z-50"
+            >
+              <div
+                class="bg-white text-gray-800 p-4 rounded-xl shadow-2xl border border-gray-100 w-[290px]"
+              >
+                <div class="space-y-3 pb-3 border-b border-gray-100">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <div class="text-[15px] font-bold text-gray-800">
+                        Adults
+                      </div>
+                      <div class="text-[12px] text-gray-400 font-medium">
+                        (12+ Years)
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center border border-gray-300 rounded-md overflow-hidden"
+                    >
+                      <button
+                        type="button"
+                        onclick="changeCount(event, 'adults', -1)"
+                        class="w-8 h-8 bg-white text-gray-700 font-bold text-base hover:bg-gray-100"
+                      >
+                        -
+                      </button>
+                      <span
+                        id="cnt_adults"
+                        class="w-8 text-center text-[14px] font-bold bg-gray-50 py-1"
+                        >2</span
+                      >
+                      <button
+                        type="button"
+                        onclick="changeCount(event, 'adults', 1)"
+                        class="w-8 h-8 bg-white text-gray-700 font-bold text-base hover:bg-gray-100"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <div class="text-[15px] font-bold text-gray-800">
+                        Children
+                      </div>
+                      <div class="text-[12px] text-gray-400 font-medium">
+                        (2-12 Years)
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center border border-gray-300 rounded-md overflow-hidden"
+                    >
+                      <button
+                        type="button"
+                        onclick="changeCount(event, 'children', -1)"
+                        class="w-8 h-8 bg-white text-gray-700 font-bold text-base hover:bg-gray-100"
+                      >
+                        -
+                      </button>
+                      <span
+                        id="cnt_children"
+                        class="w-8 text-center text-[14px] font-bold bg-gray-50 py-1"
+                        >0</span
+                      >
+                      <button
+                        type="button"
+                        onclick="changeCount(event, 'children', 1)"
+                        class="w-8 h-8 bg-white text-gray-700 font-bold text-base hover:bg-gray-100"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onclick="applySelection()"
+                  class="w-full mt-4 py-2 border border-[#5e2bff] text-[#5e2bff] font-bold rounded-lg hover:bg-[#5e2bff] hover:text-white transition-colors text-center text-[15px]"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="w-full lg:w-[150px] bg-[#ef5100] hover:bg-[#d64800] text-white font-extrabold text-[17px] tracking-wider uppercase flex items-center justify-center py-4 lg:py-0 flex-shrink-0 transition-colors"
+          >
+            SEARCH
+          </button>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 pt-3">
+          <div class="text-[18px] font-extrabold text-white leading-tight mr-1">
+            Special Fares<br />
+            <span class="font-medium text-[15px] opacity-90">(Optional):</span>
+          </div>
+
+          <label
+            class="flex items-center gap-3 px-4 py-2 rounded-xl border border-white/40 bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+          >
+            <input
+              type="radio"
+              name="special_fare"
+              class="accent-[#ef5100] w-4.5 h-4.5 cursor-pointer"
+            />
+            <div class="text-left">
+              <div class="text-[16px] font-bold leading-tight text-white">
+                Honeymoon Special
+              </div>
+              <div class="text-[13.5px] text-white/90">Up to ₹1000 Off</div>
+            </div>
+          </label>
+
+          <label
+            class="flex items-center gap-3 px-4 py-2 rounded-xl border border-white/40 bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+          >
+            <input
+              type="radio"
+              name="special_fare"
+              class="accent-[#ef5100] w-4.5 h-4.5 cursor-pointer"
+            />
+            <div class="text-left">
+              <div class="text-[16px] font-bold leading-tight text-white">
+                Family Tour
+              </div>
+              <div class="text-[13.5px] text-white/90">Group Discounts</div>
+            </div>
+          </label>
+
+          <label
+            class="flex items-center gap-3 px-4 py-2 rounded-xl border border-white/40 bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+          >
+            <input
+              type="radio"
+              name="special_fare"
+              class="accent-[#ef5100] w-4.5 h-4.5 cursor-pointer"
+            />
+            <div class="text-left">
+              <div class="text-[16px] font-bold leading-tight text-white">
+                Senior Citizens
+              </div>
+              <div class="text-[13.5px] text-white/90">Extra Care Included</div>
+            </div>
+          </label>
+
+          <label
+            class="flex items-center gap-3 px-4 py-2 rounded-xl border border-white/40 bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+          >
+            <input
+              type="radio"
+              name="special_fare"
+              class="accent-[#ef5100] w-4.5 h-4.5 cursor-pointer"
+            />
+            <div class="text-left">
+              <div class="text-[16px] font-bold leading-tight text-white">
+                Students & Trek
+              </div>
+              <div class="text-[13.5px] text-white/90">Budget Packages</div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!--Hero Section Start-->
+    <!--Feature deal Section Start-->
+    <section class="max-w-7xl mx-auto px-4 py-10 font-sans">
+      <!-- Title -->
+      <div class="text-center mb-6">
+        <h2
+          class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight"
+        >
+          Featured Deals
+        </h2>
+      </div>
+
+      <!-- Filters & Controls -->
+      <div
+        class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8"
+      >
+        <div
+          class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 text-sm font-medium scrollbar-none"
+        >
+          <button
+            class="bg-[#5e2bff] text-white px-5 py-2 rounded-full shadow-md shadow-[#5e2bff]/20 whitespace-nowrap transition"
+          >
+            Best Offers
+          </button>
+          <button
+            class="text-gray-600 hover:text-[#5e2bff] hover:bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap transition"
+          >
+            Bank Offers
+          </button>
+          <button
+            class="text-gray-600 hover:text-[#5e2bff] hover:bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap transition"
+          >
+            Flight
+          </button>
+          <button
+            class="text-gray-600 hover:text-[#5e2bff] hover:bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap transition"
+          >
+            Hotel
+          </button>
+          <button
+            class="text-gray-600 hover:text-[#5e2bff] hover:bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap transition"
+          >
+            Bus
+          </button>
+          <button
+            class="text-gray-600 hover:text-[#5e2bff] hover:bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap transition"
+          >
+            Holidays
+          </button>
+          <button
+            class="text-gray-600 hover:text-[#5e2bff] hover:bg-gray-100 px-4 py-2 rounded-full whitespace-nowrap transition"
+          >
+            Cabs
+          </button>
+          <a
+            href="#"
+            class="text-[#5e2bff] font-semibold hover:underline whitespace-nowrap ml-2"
+            >View All Offers</a
+          >
+        </div>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <button
+            onclick="
+              document
+                .getElementById('offerSlider')
+                .scrollBy({ left: -320, behavior: 'smooth' })
+            "
+            class="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md hover:bg-[#5e2bff] hover:text-white flex items-center justify-center transition text-lg"
+          >
+            ←
+          </button>
+          <button
+            onclick="
+              document
+                .getElementById('offerSlider')
+                .scrollBy({ left: 320, behavior: 'smooth' })
+            "
+            class="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md hover:bg-[#5e2bff] hover:text-white flex items-center justify-center transition text-lg"
+          >
+            →
+          </button>
+        </div>
+      </div>
+
+      <!-- Deal Slider -->
+      <div
+        id="offerSlider"
+        class="flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-6 scrollbar-none"
+      >
+        <!-- Card 1 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=200&fit=crop"
+              alt="Flight Deal"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >First Flight</span
+              >
+              <span
+                class="text-[10px] bg-amber-400 text-gray-900 font-bold px-2 py-0.5 rounded"
+                >1st Offer</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              New User Deal On First Flight
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Register and Get Flat 12% Discount on Booking First Flight with
+              Us.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 30th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >WWFIRST</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1542296332-2e4473faf563?w=400&h=200&fit=crop"
+              alt="Singapore Airlines"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Singapore Airlines</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Reach Skies At Unbeatable Price
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Redefine Your Flying Experience with Up to INR 15,000 OFF* on
+              Flight Bookings.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 15th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >SINGAPORE</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=200&fit=crop"
+              alt="Royal Jordanian"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Royal Jordanian</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Now See The World Comfortably
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Enjoy Up to INR 15,000 OFF* on Flight Bookings with Royal
+              Jordanian.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 15th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >ROYALJORDAN</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=200&fit=crop"
+              alt="Qatar Airways"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Qatar Airways</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Enjoy Exclusive Savings
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Book Flights with Qatar Airways & Save Up to 18% on International
+              Routes.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-rose-500 font-bold"
+                >Ends Today!</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >QATARSPECIAL</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=200&fit=crop"
+              alt="Hotel Stays"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Hotel Stays</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Luxury Stays at Budget Cost
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Get Flat 25% OFF on Premium Hotels & Resorts Across Top
+              Destinations.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 20th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >WANDERHOTEL</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop"
+              alt="ICICI Bank"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >ICICI Bank Deal</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Instant Discount with Credit Cards
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Flat 15% Instant Savings on Domestic & International Bookings.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 30th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >ICICICC</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=200&fit=crop"
+              alt="Bus Booking"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Bus Booking</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Smooth Bus Rides Nationwide
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Save Up to INR 500 on Intercity AC Volvo & Sleeper Bus Tickets.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 28th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >EASYBUS</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=200&fit=crop"
+              alt="Holidays"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Holidays</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Exotic Beach Holiday Packages
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Book Maldives & Bali Packages with Complimentary Island Tours.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 10th Oct 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >BEACHVIBES</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1600320254374-f2d1e0e7a144?w=400&h=200&fit=crop"
+              alt="Cab Offers"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Cab Offers</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Airport Cab Transfer Discount
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Get On-time Guaranteed Airport Pickup & Drop Rides with 20%
+              Cashback.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 30th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >AIRPORTCAB</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&h=200&fit=crop"
+              alt="Heritage Special"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Heritage Special</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Explore Royal Rajasthan Tour
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Flat INR 8,000 OFF on Palace Hotels & Guided Heritage Walks in
+              Jaipur & Udaipur.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 25th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >ROYALHERITAGE</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop"
+              alt="HDFC Bank"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >HDFC Bank</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Weekend Super Saver Discount
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Up to INR 2,000 Instant Discount on Flight & Hotel Bookings Every
+              Weekend.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 30th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >HDFCSUPER</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=200&fit=crop"
+              alt="Train Tickets"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Train Tickets</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Zero Gateway Charge Deal
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Pay Zero Payment Gateway Fees on IRCTC Train Ticket Bookings via
+              UPI.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 30th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >ZEROFEE</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BOOK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1549465220-1a8b5278b9f6?w=400&h=200&fit=crop"
+              alt="Gift Cards"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Gift Cards</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Gift Travel Experiences
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Get 10% Extra Value Bonus on Buying WanderWish Travel Gift
+              Vouchers.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 31st Oct 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >WANDERGIFT</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >BUY →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 14 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=200&fit=crop"
+              alt="Airport Lounge"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Airport Lounge</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Free Airport Lounge Access
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Get Complimented Lounge Access Pass on Booking Flight & Hotel
+              Combo Packages.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 15th Oct 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >LOUNGEPASS</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >CLAIM →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 15 -->
+        <div
+          class="min-w-[280px] max-w-[280px] md:min-w-[300px] md:max-w-[300px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden snap-start group"
+        >
+          <div class="h-32 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop"
+              alt="Forex Card"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="text-xs font-bold text-[#5e2bff] bg-[#5e2bff]/10 px-2.5 py-1 rounded-full"
+                >Forex Card</span
+              >
+            </div>
+            <h4 class="text-base font-bold text-gray-900 leading-snug mb-1">
+              Zero Forex Markup Fee
+            </h4>
+            <p class="text-xs text-gray-600 leading-relaxed flex-1">
+              Order Forex Card Online with Zero Markup Fees & Multi-currency
+              Support.
+            </p>
+            <div
+              class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"
+            >
+              <span class="text-[10px] text-gray-400"
+                >Valid Till: 30th Sep 2026</span
+              >
+              <div class="flex items-center gap-2">
+                <span
+                  class="bg-gray-100 text-gray-700 text-[10px] px-2 py-0.5 rounded font-mono"
+                  >ZEROFOREX</span
+                >
+                <a
+                  href="#"
+                  class="text-[#5e2bff] font-bold text-sm group-hover:translate-x-1 transition-transform"
+                  >ORDER →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* Hide scrollbar for all browsers */
+      .scrollbar-none {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .scrollbar-none::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <!--Feature deal Section Start-->
+
+    <!-- footer-area-start -->
+    <footer class="bg-[#12111d] text-gray-200 py-8 px-4 md:px-10 font-sans">
+      <div class="max-w-7xl mx-auto">
+        <!-- Top Section: Sidebar Navigation & Content Grid -->
+        <div
+          class="flex flex-col md:flex-row gap-8 border-b border-gray-800 pb-8"
+        >
+          <!-- Left Sidebar Menu -->
+          <div class="w-full md:w-1/4 flex flex-col space-y-1">
+            <button
+              class="bg-[#5e2bff] text-white font-bold py-2.5 px-4 text-left text-base rounded border-l-4 border-white shadow-md"
+            >
+              OUR OFFERINGS
+            </button>
+            <a
+              href="#"
+              class="py-2 px-4 text-sm font-medium hover:bg-gray-800/60 rounded transition border-b border-gray-800/40"
+              >QUICK LINKS</a
+            >
+            <a
+              href="#"
+              class="py-2 px-4 text-sm font-medium hover:bg-gray-800/60 rounded transition border-b border-gray-800/40"
+              >POPULAR DESTINATION</a
+            >
+            <a
+              href="#"
+              class="py-2 px-4 text-sm font-medium hover:bg-gray-800/60 rounded transition border-b border-gray-800/40"
+              >INTERNATIONAL DESTINATION</a
+            >
+            <a
+              href="#"
+              class="py-2 px-4 text-sm font-medium hover:bg-gray-800/60 rounded transition border-b border-gray-800/40"
+              >POPULAR AIRLINE</a
+            >
+            <a
+              href="#"
+              class="py-2 px-4 text-sm font-medium hover:bg-gray-800/60 rounded transition border-b border-gray-800/40"
+              >CONNECT WITH US</a
+            >
+            <a
+              href="#"
+              class="py-2 px-4 text-sm font-medium hover:bg-gray-800/60 rounded transition border-b border-gray-800/40"
+              >OFFERS</a
+            >
+            <a
+              href="#"
+              class="py-2 px-4 text-sm font-medium hover:bg-gray-800/60 rounded transition border-b border-gray-800/40"
+              >EMT INSIGHTS</a
+            >
+            <a
+              href="#"
+              class="py-2 px-4 text-sm font-medium hover:bg-gray-800/60 rounded transition border-b border-gray-800/40"
+              >MEDIA</a
+            >
+            <a
+              href="#"
+              class="py-2 px-4 text-sm font-medium hover:bg-gray-800/60 rounded transition border-b border-gray-800/40"
+              >INVESTOR RELATIONS</a
+            >
+            <a
+              href="#"
+              class="py-2 px-4 text-sm font-medium hover:bg-gray-800/60 rounded transition"
+              >CURRENT OPENINGS</a
+            >
+          </div>
+
+          <!-- Right Content Grid -->
+          <div class="w-full md:w-3/4">
+            <h3 class="text-xl font-bold text-white mb-5">
+              Make your travel easy with a wide range of products and services.
+            </h3>
+
+            <div
+              class="grid grid-cols-2 sm:grid-cols-4 gap-y-3.5 gap-x-6 text-sm"
+            >
+              <!-- Column 1 -->
+              <div class="flex flex-col space-y-2.5">
+                <a href="#" class="hover:text-[#5e2bff] transition">Flights</a>
+                <a href="#" class="hover:text-[#5e2bff] transition">Bus</a>
+                <a href="#" class="hover:text-[#5e2bff] transition">Airports</a>
+                <a href="#" class="hover:text-[#5e2bff] transition"
+                  >Activities</a
+                >
+                <a href="#" class="hover:text-[#5e2bff] transition"
+                  >Flight Check-in</a
+                >
+                <a
+                  href="#"
+                  class="hover:text-[#5e2bff] transition flex items-center gap-2"
+                >
+                  Work From Home
+                  <span
+                    class="bg-[#5e2bff] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full uppercase"
+                    >NEW</span
+                  >
+                </a>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="flex flex-col space-y-2.5">
+                <a href="#" class="hover:text-[#5e2bff] transition">Hotels</a>
+                <a href="#" class="hover:text-[#5e2bff] transition"
+                  >Flight Status</a
+                >
+                <a href="#" class="hover:text-[#5e2bff] transition"
+                  >Travel Guides</a
+                >
+                <a href="#" class="hover:text-[#5e2bff] transition"
+                  >Travel Updates</a
+                >
+                <a href="#" class="hover:text-[#5e2bff] transition">VIP Cabs</a>
+              </div>
+
+              <!-- Column 3 -->
+              <div class="flex flex-col space-y-2.5">
+                <a href="#" class="hover:text-[#5e2bff] transition">Trains</a>
+                <a href="#" class="hover:text-[#5e2bff] transition">Cabs</a>
+                <a href="#" class="hover:text-[#5e2bff] transition"
+                  >Check PNR Status</a
+                >
+                <a href="#" class="hover:text-[#5e2bff] transition"
+                  >Corporate Travel</a
+                >
+                <a href="#" class="hover:text-[#5e2bff] transition"
+                  >Refer & Earn</a
+                >
+              </div>
+
+              <!-- Column 4 -->
+              <div class="flex flex-col space-y-2.5">
+                <a href="#" class="hover:text-[#5e2bff] transition">Holidays</a>
+                <a href="#" class="hover:text-[#5e2bff] transition">Airlines</a>
+                <a href="#" class="hover:text-[#5e2bff] transition">EMT PRO</a>
+                <a href="#" class="hover:text-[#5e2bff] transition">Blog</a>
+                <a href="#" class="hover:text-[#5e2bff] transition"
+                  >Heritage & Events</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Brand Info & App Downloads -->
+        <div
+          class="mt-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6"
+        >
+          <!-- Brand & Description -->
+          <div class="max-w-xl">
+            <h2
+              class="text-2xl font-extrabold text-white mb-1.5 tracking-wide flex items-center gap-1"
+            >
+              WanderWish <span class="text-[#5e2bff]">Travels</span>
+            </h2>
+            <p class="text-xs text-gray-300 leading-relaxed">
+              WanderWish Travels offers 'End to End' travel solutions including
+              air tickets for 400+ airlines, hotel bookings for 1M+ properties,
+              cab, bus, and train bookings across major cities.
+            </p>
+          </div>
+
+          <!-- App Download & QR Code Section -->
+          <div
+            class="flex flex-col sm:flex-row items-start sm:items-center gap-6 text-white"
+          >
+            <!-- App Download Box -->
+            <div>
+              <h4 class="text-sm font-semibold tracking-wide mb-1">
+                Download WanderWish App
+              </h4>
+              <div class="w-8 h-[2px] bg-[#5e2bff] mb-3"></div>
+
+              <div class="flex items-center gap-3">
+                <!-- Google Play Badge -->
+                <a
+                  href="#"
+                  class="flex items-center gap-2.5 bg-black hover:bg-gray-900 border border-gray-700 px-3 py-1.5 rounded-md transition"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L18.81,13.97C20.4,13.05 20.4,10.95 18.81,10.03L16.81,8.88L14.81,10.88L14.81,13.12L16.81,15.12M4.6,1.27L14.1,10.77L12.1,12.77L4.6,1.27M4.6,22.73L12.1,11.23L14.1,13.23L4.6,22.73Z"
+                    />
+                  </svg>
+                  <div class="text-left leading-none">
+                    <span
+                      class="block text-[8px] tracking-wider text-gray-300 uppercase"
+                      >ANDROID APP ON</span
+                    >
+                    <span class="block text-xs font-bold text-white mt-0.5"
+                      >Google play</span
+                    >
+                  </div>
+                </a>
+
+                <!-- App Store Badge -->
+                <a
+                  href="#"
+                  class="flex items-center gap-2.5 bg-black hover:bg-gray-900 border border-gray-700 px-3 py-1.5 rounded-md transition"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.1c.64-.78 1.08-1.85.96-2.92-.93.04-2.07.62-2.74 1.4-.6.7-1.13 1.8-0.99 2.86 1.05.08 2.13-.56 2.77-1.34z"
+                    />
+                  </svg>
+                  <div class="text-left leading-none">
+                    <span class="block text-[8px] tracking-wider text-gray-300"
+                      >Download on the</span
+                    >
+                    <span class="block text-xs font-bold text-white mt-0.5"
+                      >App Store</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- QR Code Box -->
+            <div>
+              <h4 class="text-sm font-semibold tracking-wide mb-1 uppercase">
+                Scan QR Code
+              </h4>
+              <div class="w-8 h-[2px] bg-[#5e2bff] mb-3"></div>
+
+              <div
+                class="bg-white p-1 rounded border border-[#5e2bff] w-14 h-14 relative flex items-center justify-center"
+              >
+                <svg
+                  class="w-full h-full text-black"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M2,2H10V10H2V2M4,4V8H8V4H4M11,2H13V4H11V2M14,2H22V10H14V2M16,4V8H20V4H16M2,14H10V22H2V14M4,16V20H8V16H4M11,14H13V16H11V14M14,14H16V16H14V14M19,14H21V16H19V14M17,16H19V18H17V16M11,17H13V19H11V17M13,19H15V21H13V19M19,19H21V22H19V19M16,20H18V22H16V20M11,20H13V22H11V20Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div
+          class="mt-6 pt-4 border-t border-gray-800 text-xs text-gray-400 text-center md:text-left"
+        >
+          Copyright © 2026 WanderWish Travels
+        </div>
+      </div>
+    </footer>
+    <!-- footer-area-end -->
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

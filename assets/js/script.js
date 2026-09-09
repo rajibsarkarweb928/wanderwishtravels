@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   lucide.createIcons();
 
   const themeToggleBtn = document.getElementById("theme-toggle");
-  const htmlTag = document.getElementById("html-tag");
+  const htmlTag = document.documentElement; // use <html> directly
 
   // Apply saved theme
   if (localStorage.getItem("theme") === "dark") {
@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener("click", () => {
       htmlTag.classList.toggle("dark");
-
       if (htmlTag.classList.contains("dark")) {
         localStorage.setItem("theme", "dark");
       } else {
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== NEW: Tab switching logic for Country / Currency / Language =====
+  // ===== Tab switching logic for Country / Currency / Language =====
   const tabButtons = document.querySelectorAll(".tab-btn");
   const countryContent = document.getElementById("countryContent");
   const currencyContent = document.getElementById("currencyContent");
@@ -224,3 +223,83 @@ function applySelection() {
 }
 
 // hero section js end
+
+// Feature deal Section Start js
+const slider = document.getElementById("sliderContainer");
+const slideLeft = document.getElementById("slideLeft");
+const slideRight = document.getElementById("slideRight");
+
+slideLeft.addEventListener("click", () => {
+  slider.scrollBy({ left: -340, behavior: "smooth" });
+});
+
+slideRight.addEventListener("click", () => {
+  slider.scrollBy({ left: 340, behavior: "smooth" });
+});
+// Feature deal Section End js
+//Offer-Slider-Start
+const bannerSlider = document.getElementById("bannerSliderContainer");
+const bannerSlideLeft = document.getElementById("bannerSlideLeft");
+const bannerSlideRight = document.getElementById("bannerSlideRight");
+
+let autoSlideInterval;
+
+// Auto-slide logic (moved to a reusable function)
+const slideNext = () => {
+  const { scrollLeft, clientWidth, scrollWidth } = bannerSlider;
+  const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 10;
+  isAtEnd
+    ? bannerSlider.scrollTo({ left: 0, behavior: "smooth" })
+    : bannerSlider.scrollBy({ left: clientWidth, behavior: "smooth" });
+};
+
+// Start/Stop auto-slide
+const startAutoSlide = () => {
+  autoSlideInterval = setInterval(slideNext, 4000);
+};
+
+const stopAutoSlide = () => {
+  clearInterval(autoSlideInterval);
+};
+
+// Manual navigation
+bannerSlideLeft.addEventListener("click", () => {
+  bannerSlider.scrollBy({
+    left: -bannerSlider.offsetWidth,
+    behavior: "smooth",
+  });
+});
+
+bannerSlideRight.addEventListener("click", () => {
+  bannerSlider.scrollBy({ left: bannerSlider.offsetWidth, behavior: "smooth" });
+});
+
+// Auto-slide initialisation & hover controls
+startAutoSlide();
+bannerSlider.addEventListener("mouseenter", stopAutoSlide);
+bannerSlider.addEventListener("mouseleave", startAutoSlide);
+//Offer-Slider-End
+
+// Why-us-section-start
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.getElementById("reviewSlider");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  if (slider && prevBtn && nextBtn) {
+    const cardWidth =
+      slider.querySelector(".flex-shrink-0")?.offsetWidth || 240;
+    const gap = 12;
+
+    nextBtn.addEventListener("click", function () {
+      const scrollAmount = cardWidth + gap;
+      slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+
+    prevBtn.addEventListener("click", function () {
+      const scrollAmount = cardWidth + gap;
+      slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+  }
+});
+// Why-us-section-end

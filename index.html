@@ -1127,1373 +1127,194 @@
     </header>
 
     <!--Hero Section Start-->
+    <!-- Hero Banner Section -->
     <div
-      class="w-full bg-gradient-to-r from-[#005555] via-[#008888] to-[#00b3b3] p-10 font-sans text-white hidden lg:block"
+      class="relative w-full overflow-hidden font-sans text-white min-h-[380px] py-8 flex items-center"
     >
-      <div class="max-w-[1200px] mx-auto space-y-3 relative">
-        <!-- Tab Buttons -->
-        <div class="flex items-center gap-2 pb-1">
-          <button
-            type="button"
-            class="bg-white text-[#009a9a] font-bold text-[14px] px-5 py-1 rounded-full shadow-sm hover:bg-opacity-95 transition-all"
-          >
-            Tour Packages
-          </button>
-          <button
-            type="button"
-            class="text-white font-bold text-[14px] px-4 py-1 hover:text-white/80 transition-colors"
-          >
-            Car Rental
-          </button>
-          <button
-            type="button"
-            class="text-white font-bold text-[14px] px-4 py-1 hover:text-white/80 transition-colors"
-          >
-            Hotels
-          </button>
-        </div>
-
-        <!-- Search Box -->
+      <!-- Background Slides Container -->
+      <div id="slider" class="absolute inset-0 w-full h-full">
+        <!-- Slide 1 -->
         <div
-          class="bg-white rounded-2xl shadow-xl overflow-visible flex flex-col lg:flex-row items-stretch text-gray-800 relative"
-          id="searchBox"
+          class="slide absolute inset-0 w-full h-full bg-cover bg-center hidden opacity-100 block"
+          style="background-image: url(&quot;assets/images/banner1.jpg&quot;)"
+        ></div>
+        <!-- Slide 2 -->
+        <div
+          class="slide absolute inset-0 w-full h-full bg-cover bg-center hidden"
+          style="background-image: url(&quot;assets/images/banner2.jpg&quot;)"
+        ></div>
+        <!-- Slide 3 -->
+        <div
+          class="slide absolute inset-0 w-full h-full bg-cover bg-center hidden"
+          style="background-image: url(&quot;assets/images/banner3.jpg&quot;)"
+        ></div>
+      </div>
+
+      <!-- Content Layer -->
+      <div
+        class="relative max-w-6xl mx-auto w-full z-10 px-6 md:px-12 space-y-3.5"
+      >
+        <!-- Top Badge -->
+        <div
+          class="inline-flex items-center space-x-2 bg-black/30 backdrop-blur-md px-3.5 py-1 rounded-full border border-white/30 text-xs font-medium text-white"
         >
-          <!-- FROM -->
-          <div
-            class="flex-1 min-w-0 p-3.5 px-5 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col justify-between relative"
+          <svg
+            class="w-3.5 h-3.5 text-[#009a9a]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <span
-              class="text-[12px] font-bold text-gray-400 uppercase tracking-wider"
-              >FROM</span
-            >
-            <div
-              class="text-[24px] font-black text-black leading-tight my-0.5 truncate"
-            >
-              Siliguri
-            </div>
-            <div class="text-[12px] text-gray-500 font-medium truncate">
-              [IXB] Bagdogra / NJP / Siliguri Town
-            </div>
-            <div
-              class="hidden lg:flex items-center justify-center absolute -right-4 top-1/2 -translate-y-1/2 z-30"
-            >
-              <button
-                type="button"
-                class="w-8 h-8 bg-white border border-gray-200 rounded-full shadow-md flex items-center justify-center text-gray-500 hover:text-black hover:scale-105 transition-all"
-              >
-                <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- TO -->
-          <div
-            class="flex-1 min-w-0 p-3.5 px-5 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col justify-between"
-          >
-            <span
-              class="text-[12px] font-bold text-gray-400 uppercase tracking-wider"
-              >TO</span
-            >
-            <div
-              class="text-[24px] font-black text-black leading-tight my-0.5 truncate"
-            >
-              Gangtok
-            </div>
-            <div class="text-[12px] text-gray-500 font-medium truncate">
-              Sikkim, North Sikkim, Pelling, Bhutan...
-            </div>
-          </div>
-
-          <!-- DEPARTURE DATE trigger -->
-          <div
-            onclick="toggleCalendar(event)"
-            class="w-full lg:flex-1 p-3.5 px-4 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col justify-between flex-shrink-0 cursor-pointer relative hover:bg-slate-50 transition-colors select-none"
-          >
-            <span
-              class="text-[12px] font-bold text-gray-400 uppercase tracking-wider"
-              >DEPARTURE DATE</span
-            >
-            <div class="flex items-baseline justify-between my-0.5">
-              <div class="flex items-baseline gap-1">
-                <span
-                  id="dep_day_display"
-                  class="text-[24px] font-black text-black leading-none"
-                  >7</span
-                >
-                <span
-                  id="dep_month_display"
-                  class="text-[14px] font-bold text-black"
-                  >Sep'2026</span
-                >
-              </div>
-              <i data-lucide="calendar" class="w-4 h-4 text-gray-300"></i>
-            </div>
-            <div
-              id="dep_weekday_display"
-              class="text-[12px] text-gray-500 font-medium"
-            >
-              Monday
-            </div>
-          </div>
-
-          <!-- RETURN DATE trigger -->
-          <div
-            onclick="toggleReturnCalendar(event)"
-            class="w-full lg:flex-1 p-3.5 px-4 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col justify-between flex-shrink-0 relative cursor-pointer hover:bg-slate-50 transition-colors select-none"
-          >
-            <span
-              class="text-[12px] font-bold text-gray-400 uppercase tracking-wider"
-              >RETURN DATE</span
-            >
-            <div class="flex items-center justify-between my-0.5">
-              <div class="flex items-baseline gap-1">
-                <span
-                  id="return_day_display"
-                  class="text-[24px] font-black text-black leading-none"
-                  >15</span
-                >
-                <span
-                  id="return_month_display"
-                  class="text-[14px] font-bold text-black"
-                  >Sep'2026</span
-                >
-              </div>
-              <i data-lucide="calendar" class="w-4 h-4 text-gray-300"></i>
-            </div>
-            <div
-              id="return_weekday_display"
-              class="text-[12px] text-gray-500 font-medium"
-            >
-              Tuesday
-            </div>
-          </div>
-
-          <!-- TRAVELLER & CLASS -->
-          <div
-            class="group w-full lg:flex-1 p-3.5 px-4 border-b lg:border-b-0 border-gray-200 flex flex-col justify-between flex-shrink-0 relative cursor-pointer hover:bg-slate-50 transition-colors select-none"
-          >
-            <span
-              class="text-[12px] font-bold text-gray-400 uppercase tracking-wider"
-              >TRAVELLER & CLASS</span
-            >
-            <div class="flex items-center justify-between my-0.5">
-              <div class="flex items-baseline gap-1">
-                <span
-                  id="traveller_count_display"
-                  class="text-[24px] font-black text-black leading-none"
-                  >1</span
-                >
-                <span class="text-[14px] font-bold text-black">Traveller</span>
-              </div>
-              <i
-                data-lucide="chevron-down"
-                class="w-4 h-4 text-black font-bold"
-              ></i>
-            </div>
-            <div
-              id="class_display"
-              class="text-[12px] text-gray-500 font-medium"
-            >
-              Economy
-            </div>
-
-            <!-- dropdown popup -->
-            <div
-              class="hidden group-hover:block absolute top-full right-0 lg:left-0 pt-2 z-50"
-            >
-              <div
-                class="bg-white text-gray-800 p-3 rounded-lg shadow-2xl border border-gray-200 w-[290px]"
-              >
-                <!-- Passenger Count -->
-                <div class="space-y-3 pb-3 border-b border-gray-200">
-                  <!-- Adults -->
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <div class="text-[15px] font-bold text-gray-800">
-                        Adults
-                      </div>
-                      <div class="text-[12px] text-gray-500">(12+ Years)</div>
-                    </div>
-                    <div
-                      class="flex items-center border border-gray-300 rounded-md overflow-hidden"
-                    >
-                      <button
-                        type="button"
-                        onclick="changeCount(event, 'adults', -1)"
-                        class="w-8 h-8 bg-white text-gray-700 font-bold text-base hover:bg-gray-100 transition"
-                      >
-                        -
-                      </button>
-                      <span
-                        id="cnt_adults"
-                        class="w-8 h-8 flex items-center justify-center text-[14px] font-bold text-gray-700 bg-gray-50 border-x border-gray-200"
-                        >1</span
-                      >
-                      <button
-                        type="button"
-                        onclick="changeCount(event, 'adults', 1)"
-                        class="w-8 h-8 bg-white text-gray-700 font-bold text-base hover:bg-gray-100 transition"
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                  <!-- Children -->
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <div class="text-[15px] font-bold text-gray-800">
-                        Children
-                      </div>
-                      <div class="text-[12px] text-gray-500">(2-12 Years)</div>
-                    </div>
-                    <div
-                      class="flex items-center border border-gray-300 rounded-md overflow-hidden"
-                    >
-                      <button
-                        type="button"
-                        onclick="changeCount(event, 'children', -1)"
-                        class="w-8 h-8 bg-white text-gray-700 font-bold text-base hover:bg-gray-100 transition"
-                      >
-                        -
-                      </button>
-                      <span
-                        id="cnt_children"
-                        class="w-8 h-8 flex items-center justify-center text-[14px] font-bold text-gray-700 bg-gray-50 border-x border-gray-200"
-                        >0</span
-                      >
-                      <button
-                        type="button"
-                        onclick="changeCount(event, 'children', 1)"
-                        class="w-8 h-8 bg-white text-gray-700 font-bold text-base hover:bg-gray-100 transition"
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                  <!-- Infant -->
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <div class="text-[15px] font-bold text-gray-800">
-                        Infant
-                      </div>
-                      <div class="text-[12px] text-gray-500">(0-2 Years)</div>
-                    </div>
-                    <div
-                      class="flex items-center border border-gray-300 rounded-md overflow-hidden"
-                    >
-                      <button
-                        type="button"
-                        onclick="changeCount(event, 'infant', -1)"
-                        class="w-8 h-8 bg-white text-gray-700 font-bold text-base hover:bg-gray-100 transition"
-                      >
-                        -
-                      </button>
-                      <span
-                        id="cnt_infant"
-                        class="w-8 h-8 flex items-center justify-center text-[14px] font-bold text-gray-700 bg-gray-50 border-x border-gray-200"
-                        >0</span
-                      >
-                      <button
-                        type="button"
-                        onclick="changeCount(event, 'infant', 1)"
-                        class="w-8 h-8 bg-white text-gray-700 font-bold text-base hover:bg-gray-100 transition"
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- More than 9 Travellers -->
-                <label
-                  class="flex items-center gap-2 mt-3 px-2 py-2 bg-[#e6f6f6] rounded-md cursor-pointer"
-                >
-                  <input
-                    type="checkbox"
-                    id="moreTravellers"
-                    class="w-5 h-5 accent-[#009a9a] cursor-pointer"
-                  />
-                  <span class="text-[12px] text-gray-700"
-                    >More than 9 Travellers</span
-                  >
-                  <span class="text-[15px]">👥</span>
-                </label>
-
-                <!-- Cabin Class -->
-                <div class="mt-4 space-y-2">
-                  <label class="flex items-center gap-2 cursor-pointer">
-                    <input
-                      type="radio"
-                      name="cabinClass"
-                      value="Economy"
-                      checked
-                      class="w-5 h-5 accent-[#009a9a] cursor-pointer"
-                    />
-                    <span class="text-[14px] text-gray-700">Economy</span>
-                  </label>
-                  <label class="flex items-center gap-2 cursor-pointer">
-                    <input
-                      type="radio"
-                      name="cabinClass"
-                      value="Premium Economy"
-                      class="w-5 h-5 accent-[#009a9a] cursor-pointer"
-                    />
-                    <span class="text-[14px] text-gray-700"
-                      >Premium Economy</span
-                    >
-                  </label>
-                  <label class="flex items-center gap-2 cursor-pointer">
-                    <input
-                      type="radio"
-                      name="cabinClass"
-                      value="Business"
-                      class="w-5 h-5 accent-[#009a9a] cursor-pointer"
-                    />
-                    <span class="text-[14px] text-gray-700">Business</span>
-                  </label>
-                  <label class="flex items-center gap-2 cursor-pointer">
-                    <input
-                      type="radio"
-                      name="cabinClass"
-                      value="First Class"
-                      class="w-5 h-5 accent-[#009a9a] cursor-pointer"
-                    />
-                    <span class="text-[14px] text-gray-700">First Class</span>
-                  </label>
-                </div>
-
-                <!-- Done Button -->
-                <button
-                  type="button"
-                  onclick="applySelection()"
-                  class="w-full mt-3 py-2 border border-[#009a9a] text-[#009a9a] font-bold rounded-md hover:bg-[#009a9a] hover:text-white transition-colors text-[14px]"
-                >
-                  Done
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- SEARCH -->
-          <button
-            type="button"
-            class="w-full lg:w-[150px] bg-[#3185ed] hover:bg-[#3185ed] text-white font-extrabold text-[17px] tracking-wider uppercase flex items-center justify-center py-4 lg:py-0 flex-shrink-0 transition-colors"
-          >
-            SEARCH
-          </button>
-
-          <!-- Calendar Popup Container -->
-          <div
-            id="calendarPopupContainer"
-            class="absolute top-[110%] left-1/2 -translate-x-1/2 mt-2 z-50 hidden"
-          >
-            <!-- Departure Calendar -->
-            <div
-              id="departureCalendarContent"
-              class="bg-white text-gray-800 p-6 rounded-2xl shadow-2xl border border-gray-100 w-[340px] md:w-[760px]"
-            >
-              <div class="flex items-center justify-between mb-4 px-2">
-                <div
-                  class="flex-1 text-center font-bold text-gray-800 text-[16px]"
-                >
-                  SEP 2026
-                </div>
-                <div
-                  class="flex-1 text-center font-bold text-gray-800 text-[16px] hidden md:block"
-                >
-                  OCT 2026
-                </div>
-                <button
-                  type="button"
-                  class="absolute right-4 p-2 rounded-full hover:bg-gray-100 text-gray-600"
-                >
-                  <i data-lucide="chevron-right" class="w-5 h-5"></i>
-                </button>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Month 1 -->
-                <div>
-                  <div
-                    class="grid grid-cols-7 text-center text-[12px] font-bold text-gray-400 mb-3"
-                  >
-                    <div>Su</div>
-                    <div>Mo</div>
-                    <div>Tu</div>
-                    <div>We</div>
-                    <div>Th</div>
-                    <div>Fr</div>
-                    <div>Sa</div>
-                  </div>
-                  <div
-                    class="grid grid-cols-7 text-center text-[13px] font-semibold gap-y-2"
-                  >
-                    <div class="py-2 text-gray-300"></div>
-                    <div class="py-2 text-gray-300">1</div>
-                    <div class="py-2 text-gray-300">2</div>
-                    <div class="py-2 text-gray-300">3</div>
-                    <div class="py-2 text-gray-300">4</div>
-                    <div class="py-2 text-gray-300">5</div>
-                    <div class="py-2 text-gray-300">6</div>
-                    <div
-                      class="py-2 bg-[#009a9a] text-white rounded-lg font-bold shadow-md cursor-pointer date-cell selected"
-                      onclick="selectDate(this, 7, 'Sep\'2026', 'Monday')"
-                    >
-                      7
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 8, 'Sep\'2026', 'Tuesday')"
-                    >
-                      8
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 9, 'Sep\'2026', 'Wednesday')"
-                    >
-                      9
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 10, 'Sep\'2026', 'Thursday')"
-                    >
-                      10
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 11, 'Sep\'2026', 'Friday')"
-                    >
-                      11
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 12, 'Sep\'2026', 'Saturday')"
-                    >
-                      12
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 13, 'Sep\'2026', 'Sunday')"
-                    >
-                      13
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 14, 'Sep\'2026', 'Monday')"
-                    >
-                      14
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 15, 'Sep\'2026', 'Tuesday')"
-                    >
-                      15
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 16, 'Sep\'2026', 'Wednesday')"
-                    >
-                      16
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 17, 'Sep\'2026', 'Thursday')"
-                    >
-                      17
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 18, 'Sep\'2026', 'Friday')"
-                    >
-                      18
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 19, 'Sep\'2026', 'Saturday')"
-                    >
-                      19
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 20, 'Sep\'2026', 'Sunday')"
-                    >
-                      20
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 21, 'Sep\'2026', 'Monday')"
-                    >
-                      21
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 22, 'Sep\'2026', 'Tuesday')"
-                    >
-                      22
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 23, 'Sep\'2026', 'Wednesday')"
-                    >
-                      23
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 24, 'Sep\'2026', 'Thursday')"
-                    >
-                      24
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 25, 'Sep\'2026', 'Friday')"
-                    >
-                      25
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 26, 'Sep\'2026', 'Saturday')"
-                    >
-                      26
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 27, 'Sep\'2026', 'Sunday')"
-                    >
-                      27
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 28, 'Sep\'2026', 'Monday')"
-                    >
-                      28
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 29, 'Sep\'2026', 'Tuesday')"
-                    >
-                      29
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 30, 'Sep\'2026', 'Wednesday')"
-                    >
-                      30
-                    </div>
-                  </div>
-                </div>
-                <!-- Month 2 -->
-                <div class="hidden md:block">
-                  <div
-                    class="grid grid-cols-7 text-center text-[12px] font-bold text-gray-400 mb-3"
-                  >
-                    <div>Su</div>
-                    <div>Mo</div>
-                    <div>Tu</div>
-                    <div>We</div>
-                    <div>Th</div>
-                    <div>Fr</div>
-                    <div>Sa</div>
-                  </div>
-                  <div
-                    class="grid grid-cols-7 text-center text-[13px] font-semibold gap-y-2"
-                  >
-                    <div class="py-2 text-gray-300"></div>
-                    <div class="py-2 text-gray-300"></div>
-                    <div class="py-2 text-gray-300"></div>
-                    <div class="py-2 text-gray-300"></div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 1, 'Oct\'2026', 'Thursday')"
-                    >
-                      1
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 2, 'Oct\'2026', 'Friday')"
-                    >
-                      2
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 3, 'Oct\'2026', 'Saturday')"
-                    >
-                      3
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 4, 'Oct\'2026', 'Sunday')"
-                    >
-                      4
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 5, 'Oct\'2026', 'Monday')"
-                    >
-                      5
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 6, 'Oct\'2026', 'Tuesday')"
-                    >
-                      6
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 7, 'Oct\'2026', 'Wednesday')"
-                    >
-                      7
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 8, 'Oct\'2026', 'Thursday')"
-                    >
-                      8
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 9, 'Oct\'2026', 'Friday')"
-                    >
-                      9
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 10, 'Oct\'2026', 'Saturday')"
-                    >
-                      10
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 11, 'Oct\'2026', 'Sunday')"
-                    >
-                      11
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 12, 'Oct\'2026', 'Monday')"
-                    >
-                      12
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 13, 'Oct\'2026', 'Tuesday')"
-                    >
-                      13
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 14, 'Oct\'2026', 'Wednesday')"
-                    >
-                      14
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 15, 'Oct\'2026', 'Thursday')"
-                    >
-                      15
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 16, 'Oct\'2026', 'Friday')"
-                    >
-                      16
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 17, 'Oct\'2026', 'Saturday')"
-                    >
-                      17
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 18, 'Oct\'2026', 'Sunday')"
-                    >
-                      18
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 19, 'Oct\'2026', 'Monday')"
-                    >
-                      19
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 20, 'Oct\'2026', 'Tuesday')"
-                    >
-                      20
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 21, 'Oct\'2026', 'Wednesday')"
-                    >
-                      21
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 22, 'Oct\'2026', 'Thursday')"
-                    >
-                      22
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 23, 'Oct\'2026', 'Friday')"
-                    >
-                      23
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 24, 'Oct\'2026', 'Saturday')"
-                    >
-                      24
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 25, 'Oct\'2026', 'Sunday')"
-                    >
-                      25
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 26, 'Oct\'2026', 'Monday')"
-                    >
-                      26
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 27, 'Oct\'2026', 'Tuesday')"
-                    >
-                      27
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 28, 'Oct\'2026', 'Wednesday')"
-                    >
-                      28
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 29, 'Oct\'2026', 'Thursday')"
-                    >
-                      29
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 30, 'Oct\'2026', 'Friday')"
-                    >
-                      30
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectDate(this, 31, 'Oct\'2026', 'Saturday')"
-                    >
-                      31
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex items-center justify-end gap-6 mt-6 pt-3 border-t border-gray-100 text-[11px] text-gray-500 font-medium"
-              >
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                  Cheapest
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-red-500"></span> Highest
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-gray-400"></span> Average
-                </div>
-              </div>
-            </div>
-
-            <!-- Return Calendar -->
-            <div
-              id="returnCalendarContent"
-              class="bg-white text-gray-800 p-6 rounded-2xl shadow-2xl border border-gray-100 w-[340px] md:w-[760px] hidden"
-            >
-              <div class="flex items-center justify-between mb-4 px-2 relative">
-                <div
-                  class="flex-1 text-center font-bold text-gray-800 text-[16px]"
-                >
-                  SEP 2026
-                </div>
-                <div
-                  class="flex-1 text-center font-bold text-gray-800 text-[16px] hidden md:block"
-                >
-                  OCT 2026
-                </div>
-                <button
-                  type="button"
-                  class="absolute right-4 p-2 rounded-full hover:bg-gray-100 text-gray-600"
-                >
-                  <i data-lucide="chevron-right" class="w-5 h-5"></i>
-                </button>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Month 1 -->
-                <div>
-                  <div
-                    class="grid grid-cols-7 text-center text-[12px] font-bold text-gray-400 mb-3"
-                  >
-                    <div>Su</div>
-                    <div>Mo</div>
-                    <div>Tu</div>
-                    <div>We</div>
-                    <div>Th</div>
-                    <div>Fr</div>
-                    <div>Sa</div>
-                  </div>
-                  <div
-                    class="grid grid-cols-7 text-center text-[13px] font-semibold gap-y-2"
-                  >
-                    <div class="py-2 text-gray-300"></div>
-                    <div class="py-2 text-gray-300">1</div>
-                    <div class="py-2 text-gray-300">2</div>
-                    <div class="py-2 text-gray-300">3</div>
-                    <div class="py-2 text-gray-300">4</div>
-                    <div class="py-2 text-gray-300">5</div>
-                    <div class="py-2 text-gray-300">6</div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectReturnDate(this, 7, 'Sep\'2026', 'Monday')"
-                    >
-                      7
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 8, 'Sep\'2026', 'Tuesday')
-                      "
-                    >
-                      8
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 9, 'Sep\'2026', 'Wednesday')
-                      "
-                    >
-                      9
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 10, 'Sep\'2026', 'Thursday')
-                      "
-                    >
-                      10
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 11, 'Sep\'2026', 'Friday')
-                      "
-                    >
-                      11
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 12, 'Sep\'2026', 'Saturday')
-                      "
-                    >
-                      12
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 13, 'Sep\'2026', 'Sunday')
-                      "
-                    >
-                      13
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 14, 'Sep\'2026', 'Monday')
-                      "
-                    >
-                      14
-                    </div>
-                    <div
-                      class="py-2 bg-[#009a9a] text-white rounded-lg font-bold shadow-md cursor-pointer date-cell selected"
-                      onclick="
-                        selectReturnDate(this, 15, 'Sep\'2026', 'Tuesday')
-                      "
-                    >
-                      15
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 16, 'Sep\'2026', 'Wednesday')
-                      "
-                    >
-                      16
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 17, 'Sep\'2026', 'Thursday')
-                      "
-                    >
-                      17
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 18, 'Sep\'2026', 'Friday')
-                      "
-                    >
-                      18
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 19, 'Sep\'2026', 'Saturday')
-                      "
-                    >
-                      19
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 20, 'Sep\'2026', 'Sunday')
-                      "
-                    >
-                      20
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 21, 'Sep\'2026', 'Monday')
-                      "
-                    >
-                      21
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 22, 'Sep\'2026', 'Tuesday')
-                      "
-                    >
-                      22
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 23, 'Sep\'2026', 'Wednesday')
-                      "
-                    >
-                      23
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 24, 'Sep\'2026', 'Thursday')
-                      "
-                    >
-                      24
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 25, 'Sep\'2026', 'Friday')
-                      "
-                    >
-                      25
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 26, 'Sep\'2026', 'Saturday')
-                      "
-                    >
-                      26
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 27, 'Sep\'2026', 'Sunday')
-                      "
-                    >
-                      27
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 28, 'Sep\'2026', 'Monday')
-                      "
-                    >
-                      28
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 29, 'Sep\'2026', 'Tuesday')
-                      "
-                    >
-                      29
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 30, 'Sep\'2026', 'Wednesday')
-                      "
-                    >
-                      30
-                    </div>
-                  </div>
-                </div>
-                <!-- Month 2 -->
-                <div class="hidden md:block">
-                  <div
-                    class="grid grid-cols-7 text-center text-[12px] font-bold text-gray-400 mb-3"
-                  >
-                    <div>Su</div>
-                    <div>Mo</div>
-                    <div>Tu</div>
-                    <div>We</div>
-                    <div>Th</div>
-                    <div>Fr</div>
-                    <div>Sa</div>
-                  </div>
-                  <div
-                    class="grid grid-cols-7 text-center text-[13px] font-semibold gap-y-2"
-                  >
-                    <div class="py-2 text-gray-300"></div>
-                    <div class="py-2 text-gray-300"></div>
-                    <div class="py-2 text-gray-300"></div>
-                    <div class="py-2 text-gray-300"></div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 1, 'Oct\'2026', 'Thursday')
-                      "
-                    >
-                      1
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectReturnDate(this, 2, 'Oct\'2026', 'Friday')"
-                    >
-                      2
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 3, 'Oct\'2026', 'Saturday')
-                      "
-                    >
-                      3
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectReturnDate(this, 4, 'Oct\'2026', 'Sunday')"
-                    >
-                      4
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectReturnDate(this, 5, 'Oct\'2026', 'Monday')"
-                    >
-                      5
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 6, 'Oct\'2026', 'Tuesday')
-                      "
-                    >
-                      6
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 7, 'Oct\'2026', 'Wednesday')
-                      "
-                    >
-                      7
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 8, 'Oct\'2026', 'Thursday')
-                      "
-                    >
-                      8
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="selectReturnDate(this, 9, 'Oct\'2026', 'Friday')"
-                    >
-                      9
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 10, 'Oct\'2026', 'Saturday')
-                      "
-                    >
-                      10
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 11, 'Oct\'2026', 'Sunday')
-                      "
-                    >
-                      11
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 12, 'Oct\'2026', 'Monday')
-                      "
-                    >
-                      12
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 13, 'Oct\'2026', 'Tuesday')
-                      "
-                    >
-                      13
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 14, 'Oct\'2026', 'Wednesday')
-                      "
-                    >
-                      14
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 15, 'Oct\'2026', 'Thursday')
-                      "
-                    >
-                      15
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 16, 'Oct\'2026', 'Friday')
-                      "
-                    >
-                      16
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 17, 'Oct\'2026', 'Saturday')
-                      "
-                    >
-                      17
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 18, 'Oct\'2026', 'Sunday')
-                      "
-                    >
-                      18
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 19, 'Oct\'2026', 'Monday')
-                      "
-                    >
-                      19
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 20, 'Oct\'2026', 'Tuesday')
-                      "
-                    >
-                      20
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 21, 'Oct\'2026', 'Wednesday')
-                      "
-                    >
-                      21
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 22, 'Oct\'2026', 'Thursday')
-                      "
-                    >
-                      22
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 23, 'Oct\'2026', 'Friday')
-                      "
-                    >
-                      23
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 24, 'Oct\'2026', 'Saturday')
-                      "
-                    >
-                      24
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 25, 'Oct\'2026', 'Sunday')
-                      "
-                    >
-                      25
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 26, 'Oct\'2026', 'Monday')
-                      "
-                    >
-                      26
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 27, 'Oct\'2026', 'Tuesday')
-                      "
-                    >
-                      27
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 28, 'Oct\'2026', 'Wednesday')
-                      "
-                    >
-                      28
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 29, 'Oct\'2026', 'Thursday')
-                      "
-                    >
-                      29
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 30, 'Oct\'2026', 'Friday')
-                      "
-                    >
-                      30
-                    </div>
-                    <div
-                      class="py-2 hover:bg-teal-50 rounded-lg cursor-pointer transition-colors date-cell"
-                      onclick="
-                        selectReturnDate(this, 31, 'Oct\'2026', 'Saturday')
-                      "
-                    >
-                      31
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex items-center justify-end gap-6 mt-6 pt-3 border-t border-gray-100 text-[11px] text-gray-500 font-medium"
-              >
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                  Cheapest
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-red-500"></span> Highest
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-gray-400"></span> Average
-                </div>
-              </div>
-            </div>
-          </div>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a2.5 2.5 0 002.5-2.5V11.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 5H12a2 2 0 00-2 2v1.5a.5.5 0 01-.5.5h-2a1 1 0 01-1-1v-.5a2.5 2.5 0 00-2.5-2.5H3.055z"
+            ></path>
+          </svg>
+          <span>Trusted by 25,000+ Happy Travelers Worldwide</span>
         </div>
 
-        <!-- Special Fares -->
-        <div class="flex flex-wrap items-center gap-3 pt-3">
-          <div class="text-[18px] font-extrabold text-white leading-tight mr-1">
-            Special Fares<br />
-            <span class="font-medium text-[15px] opacity-90">(Optional):</span>
-          </div>
-          <label
-            class="flex items-center gap-3 px-4 py-2 rounded-xl border border-white/40 bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+        <!-- Main Title -->
+        <h1
+          class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-3xl tracking-tight text-white drop-shadow-md"
+        >
+          Discover Your Next Great Adventure Around the World
+        </h1>
+
+        <!-- Subtitle -->
+        <p
+          class="text-xs md:text-sm text-gray-100 max-w-xl font-normal leading-relaxed drop-shadow"
+        >
+          From breathtaking landscapes and vibrant cities to unforgettable
+          cultural experiences, we create personalized journeys that turn every
+          trip into a lifetime memory.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex items-center space-x-3 pt-1">
+          <!-- Main Action Button -->
+          <a
+            href="#"
+            class="bg-[#009a9a] hover:bg-[#008383] text-white px-6 py-2.5 rounded-full font-bold text-sm flex items-center space-x-2 transition shadow-lg"
           >
-            <input
-              type="radio"
-              name="special_fare"
-              class="accent-[#ef5100] w-4.5 h-4.5 cursor-pointer"
-            />
-            <div class="text-left">
-              <div class="text-[16px] font-bold leading-tight text-white">
-                Honeymoon Special
-              </div>
-              <div class="text-[13.5px] text-white/90">Up to ₹1000 Off</div>
-            </div>
-          </label>
-          <label
-            class="flex items-center gap-3 px-4 py-2 rounded-xl border border-white/40 bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+            <span>Explore Tours</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M7 17L17 7M17 7H7M17 7V17"
+              />
+            </svg>
+          </a>
+
+          <!-- White Video Button -->
+          <a
+            href="#"
+            class="bg-white hover:bg-gray-100 text-gray-900 px-6 py-2.5 rounded-full font-bold text-sm flex items-center space-x-2 transition shadow-lg"
           >
-            <input
-              type="radio"
-              name="special_fare"
-              class="accent-[#ef5100] w-4.5 h-4.5 cursor-pointer"
-            />
-            <div class="text-left">
-              <div class="text-[16px] font-bold leading-tight text-white">
-                Family Tour
-              </div>
-              <div class="text-[13.5px] text-white/90">Group Discounts</div>
-            </div>
-          </label>
-          <label
-            class="flex items-center gap-3 px-4 py-2 rounded-xl border border-white/40 bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+            <span>Watch Video</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 text-[#009a9a]"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Clickable Carousel Dots Indicator -->
+        <div class="flex items-center justify-center space-x-3 pt-3">
+          <button
+            onclick="goToSlide(0)"
+            class="dot w-4 h-4 rounded-full border-2 border-[#009a9a] flex items-center justify-center cursor-pointer focus:outline-none"
           >
-            <input
-              type="radio"
-              name="special_fare"
-              class="accent-[#ef5100] w-4.5 h-4.5 cursor-pointer"
-            />
-            <div class="text-left">
-              <div class="text-[16px] font-bold leading-tight text-white">
-                Senior Citizens
-              </div>
-              <div class="text-[13.5px] text-white/90">Extra Care Included</div>
-            </div>
-          </label>
-          <label
-            class="flex items-center gap-3 px-4 py-2 rounded-xl border border-white/40 bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+            <span class="w-2 h-2 bg-[#009a9a] rounded-full"></span>
+          </button>
+          <button
+            onclick="goToSlide(1)"
+            class="dot w-3.5 h-3.5 rounded-full border-2 border-white/80 cursor-pointer focus:outline-none"
           >
-            <input
-              type="radio"
-              name="special_fare"
-              class="accent-[#ef5100] w-4.5 h-4.5 cursor-pointer"
-            />
-            <div class="text-left">
-              <div class="text-[16px] font-bold leading-tight text-white">
-                Students & Trek
-              </div>
-              <div class="text-[13.5px] text-white/90">Budget Packages</div>
-            </div>
-          </label>
+            <span class="w-2 h-2 bg-transparent rounded-full"></span>
+          </button>
+          <button
+            onclick="goToSlide(2)"
+            class="dot w-3.5 h-3.5 rounded-full border-2 border-white/80 cursor-pointer focus:outline-none"
+          >
+            <span class="w-2 h-2 bg-transparent rounded-full"></span>
+          </button>
         </div>
       </div>
     </div>
+
+    <!-- JavaScript for Direct Carousel Switch (No Effect) -->
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(".dot");
+      const totalSlides = slides.length;
+      let slideInterval;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if (i === index) {
+            slide.classList.remove("hidden");
+            slide.classList.add("block");
+          } else {
+            slide.classList.remove("block");
+            slide.classList.add("hidden");
+          }
+        });
+
+        dots.forEach((dot, i) => {
+          const innerCircle = dot.querySelector("span");
+          if (i === index) {
+            dot.className =
+              "dot w-4 h-4 rounded-full border-2 border-[#009a9a] flex items-center justify-center cursor-pointer focus:outline-none";
+            innerCircle.className = "w-2 h-2 bg-[#009a9a] rounded-full";
+          } else {
+            dot.className =
+              "dot w-3.5 h-3.5 rounded-full border-2 border-white/80 cursor-pointer focus:outline-none";
+            innerCircle.className = "w-2 h-2 bg-transparent rounded-full";
+          }
+        });
+
+        currentSlide = index;
+      }
+
+      function nextSlide() {
+        let next = (currentSlide + 1) % totalSlides;
+        showSlide(next);
+      }
+
+      function goToSlide(index) {
+        showSlide(index);
+        resetTimer();
+      }
+
+      function startTimer() {
+        slideInterval = setInterval(nextSlide, 3000);
+      }
+
+      function resetTimer() {
+        clearInterval(slideInterval);
+        startTimer();
+      }
+
+      startTimer();
+    </script>
     <!--Hero Section End-->
     <!--Feature deal Section Start-->
     <section

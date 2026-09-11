@@ -103,7 +103,59 @@ document.addEventListener("DOMContentLoaded", () => {
   switchTab("country");
 });
 // hero section js start
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const totalSlides = slides.length;
+let slideInterval;
 
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    if (i === index) {
+      slide.classList.remove("hidden");
+      slide.classList.add("block");
+    } else {
+      slide.classList.remove("block");
+      slide.classList.add("hidden");
+    }
+  });
+
+  dots.forEach((dot, i) => {
+    const innerCircle = dot.querySelector("span");
+    if (i === index) {
+      dot.className =
+        "dot w-4 h-4 rounded-full border-2 border-[#009a9a] flex items-center justify-center cursor-pointer focus:outline-none";
+      innerCircle.className = "w-2 h-2 bg-[#009a9a] rounded-full";
+    } else {
+      dot.className =
+        "dot w-3.5 h-3.5 rounded-full border-2 border-white/80 cursor-pointer focus:outline-none";
+      innerCircle.className = "w-2 h-2 bg-transparent rounded-full";
+    }
+  });
+
+  currentSlide = index;
+}
+
+function nextSlide() {
+  let next = (currentSlide + 1) % totalSlides;
+  showSlide(next);
+}
+
+function goToSlide(index) {
+  showSlide(index);
+  resetTimer();
+}
+
+function startTimer() {
+  slideInterval = setInterval(nextSlide, 3000);
+}
+
+function resetTimer() {
+  clearInterval(slideInterval);
+  startTimer();
+}
+
+startTimer();
 // hero section js end
 
 // Feature deal Section Start js

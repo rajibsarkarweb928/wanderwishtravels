@@ -1,35 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
-  lucide.createIcons();
+  // Initialize Lucide Icons
+  if (typeof lucide !== "undefined") {
+    lucide.createIcons();
+  }
 
+  // ===== Theme Toggle Logic =====
   const themeToggleBtn = document.getElementById("theme-toggle");
-  const htmlTag = document.documentElement; // use <html> directly
+  const htmlTag = document.documentElement;
 
-  // Apply saved theme
   if (localStorage.getItem("theme") === "dark") {
     htmlTag.classList.add("dark");
   }
 
-  // Toggle click event
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener("click", () => {
       htmlTag.classList.toggle("dark");
-      if (htmlTag.classList.contains("dark")) {
-        localStorage.setItem("theme", "dark");
-      } else {
-        localStorage.setItem("theme", "light");
-      }
+      const isDark = htmlTag.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
     });
   }
 
-  // Mobile Country Modal Open/Close Logic
+  // ===== Mobile Navbar Toggle Logic =====
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      if (menuIcon) menuIcon.classList.toggle("hidden");
+      if (closeIcon) closeIcon.classList.toggle("hidden");
+    });
+  }
+
+  // ===== Mobile Country Modal Logic =====
   const openBtn = document.getElementById("openCountryModal");
   const closeBtn = document.getElementById("closeCountryModal");
   const applyBtn = document.getElementById("applyCountryModal");
   const modal = document.getElementById("countryModal");
 
+  const closeModal = () => modal && modal.classList.add("hidden");
+
   if (openBtn && modal) {
     openBtn.addEventListener("click", (e) => {
-      // Show modal when clicked on mobile
       if (window.innerWidth < 1024) {
         e.preventDefault();
         modal.classList.remove("hidden");
@@ -37,69 +51,53 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (closeBtn && modal) {
-    closeBtn.addEventListener("click", () => {
-      modal.classList.add("hidden");
-    });
-  }
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (applyBtn) applyBtn.addEventListener("click", closeModal);
 
-  if (applyBtn && modal) {
-    applyBtn.addEventListener("click", () => {
-      modal.classList.add("hidden");
-    });
-  }
-
-  // Close modal when clicking on the background
   if (modal) {
     modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.classList.add("hidden");
-      }
+      if (e.target === modal) closeModal();
     });
   }
 
-  // ===== Tab switching logic for Country / Currency / Language =====
+  // ===== Tab Switching Logic (Country / Currency / Language) =====
   const tabButtons = document.querySelectorAll(".tab-btn");
-  const countryContent = document.getElementById("countryContent");
-  const currencyContent = document.getElementById("currencyContent");
-  const languageContent = document.getElementById("languageContent");
+  const tabContents = {
+    country: document.getElementById("countryContent"),
+    currency: document.getElementById("currencyContent"),
+    language: document.getElementById("languageContent"),
+  };
 
-  // Function to switch tabs
   function switchTab(tabId) {
-    // Hide all content
-    if (countryContent) countryContent.style.display = "none";
-    if (currencyContent) currencyContent.style.display = "none";
-    if (languageContent) languageContent.style.display = "none";
+    // Hide all contents
+    Object.values(tabContents).forEach((content) => {
+      if (content) content.style.display = "none";
+    });
 
     // Show selected content
-    if (tabId === "country" && countryContent) {
-      countryContent.style.display = "block";
-    } else if (tabId === "currency" && currencyContent) {
-      currencyContent.style.display = "block";
-    } else if (tabId === "language" && languageContent) {
-      languageContent.style.display = "block";
+    if (tabContents[tabId]) {
+      tabContents[tabId].style.display = "block";
     }
 
-    // Update active class on buttons
+    // Update active button state
     tabButtons.forEach((btn) => {
-      btn.classList.remove("active", "bg-[#1890ff]", "text-white", "shadow-sm");
-      btn.classList.add("text-gray-600", "dark:text-gray-300");
-      if (btn.dataset.tab === tabId) {
-        btn.classList.add("active", "bg-[#1890ff]", "text-white", "shadow-sm");
-        btn.classList.remove("text-gray-600", "dark:text-gray-300");
-      }
+      const isActive = btn.dataset.tab === tabId;
+      btn.classList.toggle("active", isActive);
+      btn.classList.toggle("bg-[#1890ff]", isActive);
+      btn.classList.toggle("text-white", isActive);
+      btn.classList.toggle("shadow-sm", isActive);
+      btn.classList.toggle("text-gray-600", !isActive);
+      btn.classList.toggle("dark:text-gray-300", !isActive);
     });
   }
 
-  // Add click event to each tab button
   tabButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const tabId = btn.dataset.tab;
-      if (tabId) switchTab(tabId);
+      if (btn.dataset.tab) switchTab(btn.dataset.tab);
     });
   });
 
-  // Set default tab (Country) on load
+  // Default active tab
   switchTab("country");
 });
 // hero section js start

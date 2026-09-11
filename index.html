@@ -22,1107 +22,194 @@
     class="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors"
   >
     <header
-      class="w-full border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 relative"
+      class="w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200/80 dark:border-gray-700/80 sticky top-0 z-50 shadow-sm"
     >
-      <!-- ====== MAIN HEADER ROW (desktop & mobile) ====== -->
       <div
-        class="max-w-[1300px] mx-auto h-[90px] flex items-center justify-between px-4 sm:px-8 lg:px-12"
+        class="max-w-[1300px] mx-auto h-[80px] flex items-center justify-between px-4 sm:px-8 lg:px-12"
       >
-        <!-- LEFT: Hamburger + Logo + Desktop Nav -->
-        <div class="flex items-center gap-3 sm:gap-6">
-          <!-- Hamburger (mobile) -->
-          <button
-            class="lg:hidden p-1 text-gray-700 dark:text-gray-300 hover:text-[#009a9a] transition-colors"
-            aria-label="Open Menu"
-          >
-            <i data-lucide="menu" class="w-6 h-6"></i>
-          </button>
-
+        <!-- LEFT: Logo + Desktop Nav -->
+        <div class="flex items-center gap-10">
           <!-- Logo -->
-          <div class="logo-wrapper flex-shrink-0">
-            <div class="relative">
-              <div
-                class="text-[20px] sm:text-[25px] font-bold text-[#009a9a] tracking-tight leading-none"
+          <a href="#" class="flex-shrink-0 group">
+            <div
+              class="text-[22px] sm:text-[26px] font-extrabold tracking-tight leading-none transition-transform duration-300 group-hover:scale-[1.02]"
+            >
+              <span
+                class="bg-gradient-to-r from-[#007a7a] to-[#00b3b3] bg-clip-text text-transparent"
+                >wander</span
+              ><span
+                class="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent"
+                >wish</span
+              ><span
+                class="text-[12px] sm:text-[14px] text-gray-400 dark:text-gray-500 font-normal tracking-wide"
+                >travels</span
               >
-                wanderwish<span
-                  class="text-[12px] sm:text-[14px] text-gray-500 dark:text-gray-400 font-normal"
-                  >travels</span
-                >
-              </div>
-              <div class="flex items-center gap-1 mt-1">
-                <span class="w-4 sm:w-6 h-[2px] bg-orange-500"></span>
-                <span
-                  class="text-[9px] sm:text-[10px] italic text-gray-500 dark:text-gray-400"
-                  >Travel with Wisdom</span
-                >
-                <span class="w-4 sm:w-6 h-[2px] bg-green-600"></span>
-              </div>
             </div>
-          </div>
+            <div class="flex items-center gap-1.5 mt-1">
+              <span
+                class="w-4 sm:w-6 h-[2px] bg-gradient-to-r from-orange-500 to-amber-400 rounded-full"
+              ></span>
+              <span
+                class="text-[9px] sm:text-[10px] italic text-gray-500 dark:text-gray-400 tracking-wide"
+                >Travel with Wisdom</span
+              >
+              <span
+                class="w-4 sm:w-6 h-[2px] bg-gradient-to-r from-green-500 to-emerald-400 rounded-full"
+              ></span>
+            </div>
+          </a>
 
-          <!-- ====== DESKTOP NAV ====== -->
-          <nav
-            class="hidden lg:flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5"
-          >
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-0.5">
             <a
               href="#"
-              class="flex flex-col items-center gap-1 px-3.5 py-2 bg-[#e6f6f6] dark:bg-gray-700/60 border border-[#b3e0e0] dark:border-gray-600 rounded-xl text-[#003d3d] dark:text-gray-100 font-bold text-[14px] hover:bg-[#cceeee] transition-all flex-shrink-0 shadow-2xs"
+              class="relative inline-block px-4 py-2 text-[15px] font-semibold text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200 group"
             >
-              <i
-                data-lucide="building-2"
-                class="w-[24px] h-[24px] text-[#009a9a] dark:text-teal-400"
-              ></i>
-              <span>Hotels</span>
+              <span class="relative inline-block">
+                Home
+                <span
+                  class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-gradient-to-r from-[#007a7a] to-[#00b3b3] rounded-full transition-all duration-300 group-hover:w-full"
+                ></span>
+              </span>
             </a>
             <a
               href="#"
-              class="flex flex-col items-center gap-1 px-3.5 py-2 text-[#003d3d] dark:text-gray-200 font-bold text-[14px] hover:text-[#009a9a] transition-colors flex-shrink-0"
+              class="relative inline-block px-4 py-2 text-[15px] font-semibold text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200 group"
             >
-              <i
-                data-lucide="train-front"
-                class="w-[24px] h-[24px] text-gray-700 dark:text-gray-300"
-              ></i>
-              <span>Trains</span>
+              <span class="relative inline-block">
+                Hotels
+                <span
+                  class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-gradient-to-r from-[#007a7a] to-[#00b3b3] rounded-full transition-all duration-300 group-hover:w-full"
+                ></span>
+              </span>
             </a>
             <a
               href="#"
-              class="flex flex-col items-center gap-1 px-3.5 py-2 text-[#003d3d] dark:text-gray-200 font-bold text-[14px] hover:text-[#009a9a] transition-colors flex-shrink-0"
+              class="relative inline-block px-4 py-2 text-[15px] font-semibold text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200 group"
             >
-              <i
-                data-lucide="bus"
-                class="w-[24px] h-[24px] text-gray-700 dark:text-gray-300"
-              ></i>
-              <span>Bus</span>
+              <span class="relative inline-block">
+                Packages
+                <span
+                  class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-gradient-to-r from-[#007a7a] to-[#00b3b3] rounded-full transition-all duration-300 group-hover:w-full"
+                ></span>
+              </span>
             </a>
             <a
               href="#"
-              class="flex flex-col items-center gap-1 px-3.5 py-2 text-[#003d3d] dark:text-gray-200 font-bold text-[14px] hover:text-[#009a9a] transition-colors flex-shrink-0"
+              class="relative inline-block px-4 py-2 text-[15px] font-semibold text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200 group"
             >
-              <i
-                data-lucide="palmtree"
-                class="w-[24px] h-[24px] text-gray-700 dark:text-gray-300"
-              ></i>
-              <span>Holidays</span>
+              <span class="relative inline-block">
+                Cabs
+                <span
+                  class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-gradient-to-r from-[#007a7a] to-[#00b3b3] rounded-full transition-all duration-300 group-hover:w-full"
+                ></span>
+              </span>
             </a>
             <a
               href="#"
-              class="flex flex-col items-center gap-1 px-3.5 py-2 text-[#003d3d] dark:text-gray-200 font-bold text-[14px] hover:text-[#009a9a] transition-colors flex-shrink-0"
+              class="relative inline-block px-4 py-2 text-[15px] font-semibold text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200 group"
             >
-              <i
-                data-lucide="car"
-                class="w-[24px] h-[24px] text-gray-700 dark:text-gray-300"
-              ></i>
-              <span>Cabs</span>
+              <span class="relative inline-block">
+                Destination
+                <span
+                  class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-gradient-to-r from-[#007a7a] to-[#00b3b3] rounded-full transition-all duration-300 group-hover:w-full"
+                ></span>
+              </span>
             </a>
             <a
               href="#"
-              class="flex flex-col items-center gap-1 px-3.5 py-2 text-[#003d3d] dark:text-gray-200 font-bold text-[14px] hover:text-[#009a9a] transition-colors flex-shrink-0"
+              class="relative inline-block px-4 py-2 text-[15px] font-semibold text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200 group"
             >
-              <i
-                data-lucide="ticket"
-                class="w-[24px] h-[24px] text-gray-700 dark:text-gray-300"
-              ></i>
-              <span>Activities</span>
+              <span class="relative inline-block">
+                Blog
+                <span
+                  class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-gradient-to-r from-[#007a7a] to-[#00b3b3] rounded-full transition-all duration-300 group-hover:w-full"
+                ></span>
+              </span>
             </a>
             <a
               href="#"
-              class="flex flex-col items-center gap-1 px-3.5 py-2 text-[#003d3d] dark:text-gray-200 font-bold text-[14px] hover:text-[#009a9a] transition-colors flex-shrink-0"
+              class="relative inline-block px-4 py-2 text-[15px] font-semibold text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200 group"
             >
-              <i
-                data-lucide="book-open"
-                class="w-[24px] h-[24px] text-gray-700 dark:text-gray-300"
-              ></i>
-              <span>Visa</span>
-            </a>
-            <a
-              href="#"
-              class="flex flex-col items-center gap-1 px-3.5 py-2 text-[#003d3d] dark:text-gray-200 font-bold text-[14px] hover:text-[#009a9a] transition-colors flex-shrink-0"
-            >
-              <i
-                data-lucide="ellipsis"
-                class="w-[24px] h-[24px] text-gray-700 dark:text-gray-300"
-              ></i>
-              <span>More</span>
+              <span class="relative inline-block">
+                Contact
+                <span
+                  class="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-gradient-to-r from-[#007a7a] to-[#00b3b3] rounded-full transition-all duration-300 group-hover:w-full"
+                ></span>
+              </span>
             </a>
           </nav>
         </div>
 
-        <!-- RIGHT: Country / Notification / Dark Mode / Login -->
-        <div class="topbar-navigation flex items-center gap-3 sm:gap-8">
-          <div class="flex flex-col items-end gap-0">
-            <div class="flex items-center gap-3 sm:gap-4">
-              <!-- Customer Service (desktop) -->
-              <div class="hidden lg:block lg:relative lg:group py-1">
-                <button
-                  class="flex items-center gap-1.5 text-gray-700 dark:text-gray-300 hover:text-[#009a9a] transition-colors font-medium text-[14px] cursor-pointer"
-                >
-                  <i data-lucide="headphones" class="w-[18px] h-[18px]"></i>
-                  <span>Customer Service</span>
-                  <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
-                </button>
-                <div
-                  class="absolute right-0 top-full pt-2 hidden lg:group-hover:block z-50 min-w-[320px]"
-                >
-                  <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-700 p-5 space-y-4 text-left"
-                  >
-                    <div class="flex items-start gap-3.5">
-                      <div
-                        class="w-10 h-10 rounded-2xl bg-emerald-50 dark:bg-emerald-900/40 flex items-center justify-center flex-shrink-0 mt-0.5"
-                      >
-                        <i
-                          data-lucide="phone-call"
-                          class="w-5 h-5 text-emerald-600 dark:text-emerald-400"
-                        ></i>
-                      </div>
-                      <div class="flex flex-col">
-                        <span
-                          class="text-[15px] font-bold text-gray-800 dark:text-gray-200 leading-snug"
-                          >Call Support</span
-                        >
-                        <div
-                          class="text-[13px] text-gray-600 dark:text-gray-400 leading-relaxed"
-                        >
-                          Tel : 011 - 43131313, 43030303
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flex items-start gap-3.5">
-                      <div
-                        class="w-10 h-10 rounded-2xl bg-blue-50 dark:bg-blue-900/40 flex items-center justify-center flex-shrink-0 mt-0.5"
-                      >
-                        <i
-                          data-lucide="mail"
-                          class="w-5 h-5 text-[#009a9a] dark:text-teal-400"
-                        ></i>
-                      </div>
-                      <div class="flex flex-col">
-                        <span
-                          class="text-[15px] font-bold text-gray-800 dark:text-gray-200 leading-snug"
-                          >Mail Support</span
-                        >
-                        <a
-                          href="mailto:Care@easemytrip.com"
-                          class="text-[13px] font-medium text-[#009a9a] hover:underline"
-                          >Care@easemytrip.com</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Country / Language (desktop dropdown – hover) -->
-              <div class="relative py-1 group hidden lg:block">
-                <div
-                  class="flex items-center gap-2 cursor-default text-gray-800 dark:text-gray-200 py-1"
-                >
-                  <svg
-                    class="w-5 h-3.5 rounded-[2px] shadow-2xs"
-                    viewBox="0 0 640 480"
-                  >
-                    <path fill="#f93" d="M0 0h640v160H0z" />
-                    <path fill="#fff" d="M0 160h640v160H0z" />
-                    <path fill="#128807" d="M0 320h640v160H0z" />
-                    <circle
-                      cx="320"
-                      cy="240"
-                      r="60"
-                      fill="none"
-                      stroke="#008"
-                      stroke-width="12"
-                    />
-                  </svg>
-                  <span class="text-sm font-medium">India</span>
-                  <svg
-                    class="w-4 h-4 text-gray-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="absolute right-0 top-full pt-2 hidden lg:group-hover:block z-50 w-[420px]"
-                >
-                  <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-700 p-5 space-y-4 text-left"
-                  >
-                    <div
-                      class="grid grid-cols-2 gap-4 pb-4 border-b border-gray-100 dark:border-gray-700"
-                    >
-                      <div>
-                        <label
-                          class="block text-[13px] font-semibold text-gray-600 dark:text-gray-300 mb-1.5"
-                          >Choose Country</label
-                        >
-                        <div
-                          class="flex items-center justify-between bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl px-3 py-2 text-sm text-gray-800 dark:text-gray-200 shadow-sm"
-                        >
-                          <span class="flex items-center gap-2">
-                            <svg
-                              class="w-5 h-3.5 rounded-[2px]"
-                              viewBox="0 0 640 480"
-                            >
-                              <path fill="#f93" d="M0 0h640v160H0z" />
-                              <path fill="#fff" d="M0 160h640v160H0z" />
-                              <path fill="#128807" d="M0 320h640v160H0z" />
-                              <circle
-                                cx="320"
-                                cy="240"
-                                r="60"
-                                fill="none"
-                                stroke="#008"
-                                stroke-width="12"
-                              />
-                            </svg>
-                            India
-                          </span>
-                          <svg
-                            class="w-4 h-4 text-gray-500"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M19 9l-7 7-7-7"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                      <div>
-                        <label
-                          class="block text-[13px] font-semibold text-gray-600 dark:text-gray-300 mb-1.5"
-                          >Choose Currency</label
-                        >
-                        <div
-                          class="flex items-center justify-between bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl px-3 py-2 text-sm text-gray-800 dark:text-gray-200 shadow-sm"
-                        >
-                          <span class="font-medium">INR</span>
-                          <svg
-                            class="w-4 h-4 text-gray-500"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M19 9l-7 7-7-7"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <label
-                        class="block text-[13px] font-semibold text-gray-600 dark:text-gray-300 mb-2.5"
-                        >Choose Language</label
-                      >
-                      <div class="grid grid-cols-3 gap-2.5">
-                        <label
-                          class="flex items-center gap-2.5 p-2.5 border-2 border-[#009a9a] bg-[#e6f6f6] dark:bg-gray-700 dark:border-teal-400 rounded-xl text-xs font-medium text-gray-800 dark:text-gray-200 cursor-pointer"
-                        >
-                          <input
-                            type="radio"
-                            name="desktop_language"
-                            checked
-                            class="text-[#009a9a] focus:ring-0 w-4 h-4"
-                          />
-                          <span>English</span>
-                        </label>
-                        <label
-                          class="flex items-center gap-2.5 p-2.5 border border-gray-200 dark:border-gray-700 rounded-xl text-xs font-medium text-gray-700 dark:text-gray-300 cursor-pointer hover:border-gray-300 dark:hover:border-gray-600"
-                        >
-                          <input
-                            type="radio"
-                            name="desktop_language"
-                            class="text-[#009a9a] focus:ring-0 w-4 h-4"
-                          />
-                          <span>Hindi</span>
-                        </label>
-                        <label
-                          class="flex items-center gap-2.5 p-2.5 border border-gray-200 dark:border-gray-700 rounded-xl text-xs font-medium text-gray-700 dark:text-gray-300 cursor-pointer hover:border-gray-300 dark:hover:border-gray-600"
-                        >
-                          <input
-                            type="radio"
-                            name="desktop_language"
-                            class="text-[#009a9a] focus:ring-0 w-4 h-4"
-                          />
-                          <span>Assamese</span>
-                        </label>
-                        <label
-                          class="flex items-center gap-2.5 p-2.5 border border-gray-200 dark:border-gray-700 rounded-xl text-xs font-medium text-gray-700 dark:text-gray-300 cursor-pointer hover:border-gray-300 dark:hover:border-gray-600"
-                        >
-                          <input
-                            type="radio"
-                            name="desktop_language"
-                            class="text-[#009a9a] focus:ring-0 w-4 h-4"
-                          />
-                          <span>Bengali</span>
-                        </label>
-                        <label
-                          class="flex items-center gap-2.5 p-2.5 border border-gray-200 dark:border-gray-700 rounded-xl text-xs font-medium text-gray-700 dark:text-gray-300 cursor-pointer hover:border-gray-300 dark:hover:border-gray-600"
-                        >
-                          <input
-                            type="radio"
-                            name="desktop_language"
-                            class="text-[#009a9a] focus:ring-0 w-4 h-4"
-                          />
-                          <span>Gujarati</span>
-                        </label>
-                        <label
-                          class="flex items-center gap-2.5 p-2.5 border border-gray-200 dark:border-gray-700 rounded-xl text-xs font-medium text-gray-700 dark:text-gray-300 cursor-pointer hover:border-gray-300 dark:hover:border-gray-600"
-                        >
-                          <input
-                            type="radio"
-                            name="desktop_language"
-                            class="text-[#009a9a] focus:ring-0 w-4 h-4"
-                          />
-                          <span>Marathi</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Country button – MOBILE: opens modal on click -->
-              <button
-                id="openCountryModal"
-                class="lg:hidden flex items-center gap-1.5 text-gray-700 dark:text-gray-300 hover:text-[#009a9a] transition-colors font-semibold text-[13px] sm:text-[14px] cursor-pointer"
-              >
-                <svg
-                  class="w-5 h-3.5 rounded-[2px] shadow-2xs"
-                  viewBox="0 0 640 480"
-                >
-                  <path fill="#f93" d="M0 0h640v160H0z" />
-                  <path fill="#fff" d="M0 160h640v160H0z" />
-                  <path fill="#128807" d="M0 320h640v160H0z" />
-                  <circle
-                    cx="320"
-                    cy="240"
-                    r="60"
-                    fill="none"
-                    stroke="#008"
-                    stroke-width="12"
-                  />
-                </svg>
-                <span class="tracking-wide">India</span>
-                <i
-                  data-lucide="chevron-down"
-                  class="w-3.5 h-3.5 text-gray-400"
-                ></i>
-              </button>
-
-              <!-- Notification (mobile) -->
-              <button
-                title="Notifications"
-                class="relative p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors lg:hidden"
-              >
-                <i
-                  data-lucide="bell"
-                  class="w-[20px] h-[20px] text-gray-700 dark:text-gray-300 stroke-[1.75]"
-                ></i>
-                <span
-                  class="absolute top-0.5 right-0.5 w-2.5 h-2.5 bg-pink-600 rounded-full ring-2 ring-white dark:ring-gray-800"
-                ></span>
-              </button>
-
-              <!-- Dark Mode Toggle -->
-              <button
-                id="theme-toggle"
-                title="Toggle Dark Mode"
-                class="hidden sm:block p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-              >
-                <i
-                  data-lucide="moon"
-                  class="w-[18px] h-[18px] text-gray-700 dark:text-gray-300 stroke-[1.75]"
-                ></i>
-              </button>
-            </div>
-
-            <!-- Login / Signup (desktop) -->
-            <div class="hidden lg:block relative group pt-1">
-              <button
-                type="button"
-                class="bg-[#009a9a] hover:bg-[#007a7a] text-white text-[14px] font-semibold px-5 py-2 rounded-full transition duration-200 shadow-sm cursor-pointer"
-              >
-                Login or Signup
-              </button>
-              <div
-                class="absolute right-0 top-full hidden group-hover:block w-80 bg-white rounded-2xl shadow-xl border border-gray-100 py-3 z-50"
-              >
-                <a
-                  href="#"
-                  class="group/item flex items-center gap-4 px-4 py-3 hover:bg-[#009a9a]/10 transition duration-150 border-b border-gray-100"
-                >
-                  <div
-                    class="w-11 h-11 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 group-hover/item:bg-[#009a9a]/10 group-hover/item:border-[#009a9a]/20 transition duration-150"
-                  >
-                    <svg
-                      class="w-6 h-6 text-gray-700 group-hover/item:text-[#009a9a] transition duration-150"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4
-                      class="text-[15px] font-bold text-gray-900 group-hover/item:text-[#009a9a] leading-tight transition duration-150"
-                    >
-                      Customer Login
-                    </h4>
-                    <p class="text-[13px] text-gray-500 mt-1">
-                      Login & check bookings
-                    </p>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  class="group/item flex items-center gap-4 px-4 py-3 hover:bg-[#009a9a]/10 transition duration-150 border-b border-gray-100"
-                >
-                  <div
-                    class="w-11 h-11 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 group-hover/item:bg-[#009a9a]/10 group-hover/item:border-[#009a9a]/20 transition duration-150"
-                  >
-                    <svg
-                      class="w-6 h-6 text-gray-700 group-hover/item:text-[#009a9a] transition duration-150"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                    >
-                      <rect x="3" y="6.5" width="18" height="13.5" rx="2" />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M8 6.5V5a2 2 0 012-2h4a2 2 0 012 2v1.5"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 11h18"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M10 11v2h4v-2"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4
-                      class="text-[15px] font-bold text-gray-900 group-hover/item:text-[#009a9a] leading-tight transition duration-150"
-                    >
-                      Corporate Travel
-                    </h4>
-                    <p class="text-[13px] text-gray-500 mt-1">
-                      Login to corporate account
-                    </p>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  class="group/item flex items-center gap-4 px-4 py-3 hover:bg-[#009a9a]/10 transition duration-150 border-b border-gray-100"
-                >
-                  <div
-                    class="w-11 h-11 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 group-hover/item:bg-[#009a9a]/10 group-hover/item:border-[#009a9a]/20 transition duration-150"
-                  >
-                    <svg
-                      class="w-6 h-6 text-gray-700 group-hover/item:text-[#009a9a] transition duration-150"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle cx="12" cy="10" r="3.25" />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M5 11a7 7 0 0114 0"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M5 11v3a2 2 0 002 2h1"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19 11v3a2 2 0 01-2 2h-1"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M7 21a5 5 0 0110 0"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M16 16h1.25a1.75 1.75 0 001.75-1.75V13"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4
-                      class="text-[15px] font-bold text-gray-900 group-hover/item:text-[#009a9a] leading-tight transition duration-150"
-                    >
-                      Agent Login
-                    </h4>
-                    <p class="text-[13px] text-gray-500 mt-1">
-                      Login to your agent account
-                    </p>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  class="group/item flex items-center gap-4 px-4 py-3 hover:bg-[#009a9a]/10 transition duration-150"
-                >
-                  <div
-                    class="w-11 h-11 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 group-hover/item:bg-[#009a9a]/10 group-hover/item:border-[#009a9a]/20 transition duration-150"
-                  >
-                    <svg
-                      class="w-6 h-6 text-gray-700 group-hover/item:text-[#009a9a] transition duration-150"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M7.5 12h5.25M7.5 15h3"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3.75 4.5h16.5A2.25 2.25 0 0122.5 6.75v10.5a2.25 2.25 0 01-2.25 2.25H3.75a2.25 2.25 0 01-2.25-2.25V6.75A2.25 2.25 0 013.75 4.5z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4
-                      class="text-[15px] font-bold text-gray-900 group-hover/item:text-[#009a9a] leading-tight transition duration-150"
-                    >
-                      My Booking
-                    </h4>
-                    <p class="text-[13px] text-gray-500 mt-1">
-                      Manage your bookings here
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+        <!-- RIGHT: Book Now button -->
+        <div class="flex items-center">
+          <button
+            class="relative overflow-hidden bg-gradient-to-r from-[#007a7a] to-[#009a9a] hover:from-[#009a9a] hover:to-[#00b3b3] text-white text-[14px] font-semibold px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
+          >
+            <span class="relative z-10">Book Now</span>
+          </button>
         </div>
       </div>
 
-      <!-- ====== MOBILE NAV (2 rows, 4 columns) ====== -->
+      <!-- MOBILE NAV -->
       <div
-        class="lg:hidden grid grid-cols-4 gap-3 px-4 py-3 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700"
+        class="lg:hidden flex flex-wrap items-center gap-x-4 gap-y-2 px-4 py-3 border-t border-gray-100 dark:border-gray-700/80 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md text-[14px] font-semibold"
       >
         <a
           href="#"
-          class="flex flex-col items-center gap-1.5 p-2 bg-[#e6f6f6] dark:bg-gray-700/60 border border-[#b3e0e0] dark:border-gray-600 rounded-xl hover:bg-[#cceeee] transition-all shadow-2xs"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Home</a
         >
-          <i
-            data-lucide="building-2"
-            class="w-[28px] h-[28px] text-[#009a9a] dark:text-teal-400"
-          ></i>
-          <span class="text-[14px] font-bold text-[#003d3d] dark:text-gray-100"
-            >Hotels</span
-          >
-        </a>
         <a
           href="#"
-          class="flex flex-col items-center gap-1.5 p-2 hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-xl transition-colors"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Flights</a
         >
-          <i
-            data-lucide="train-front"
-            class="w-[28px] h-[28px] text-gray-700 dark:text-gray-300"
-          ></i>
-          <span
-            class="text-[14px] font-semibold text-[#003d3d] dark:text-gray-200"
-            >Trains</span
-          >
-        </a>
         <a
           href="#"
-          class="flex flex-col items-center gap-1.5 p-2 hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-xl transition-colors"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Hotels</a
         >
-          <i
-            data-lucide="bus"
-            class="w-[28px] h-[28px] text-gray-700 dark:text-gray-300"
-          ></i>
-          <span
-            class="text-[14px] font-semibold text-[#003d3d] dark:text-gray-200"
-            >Bus</span
-          >
-        </a>
         <a
           href="#"
-          class="flex flex-col items-center gap-1.5 p-2 hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-xl transition-colors"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Packages</a
         >
-          <i
-            data-lucide="palmtree"
-            class="w-[28px] h-[28px] text-gray-700 dark:text-gray-300"
-          ></i>
-          <span
-            class="text-[14px] font-semibold text-[#003d3d] dark:text-gray-200"
-            >Holidays</span
-          >
-        </a>
         <a
           href="#"
-          class="flex flex-col items-center gap-1.5 p-2 hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-xl transition-colors"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Cruise</a
         >
-          <i
-            data-lucide="car"
-            class="w-[28px] h-[28px] text-gray-700 dark:text-gray-300"
-          ></i>
-          <span
-            class="text-[14px] font-semibold text-[#003d3d] dark:text-gray-200"
-            >Cabs</span
-          >
-        </a>
         <a
           href="#"
-          class="flex flex-col items-center gap-1.5 p-2 hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-xl transition-colors"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Cabs</a
         >
-          <i
-            data-lucide="ticket"
-            class="w-[28px] h-[28px] text-gray-700 dark:text-gray-300"
-          ></i>
-          <span
-            class="text-[14px] font-semibold text-[#003d3d] dark:text-gray-200"
-            >Activities</span
-          >
-        </a>
         <a
           href="#"
-          class="flex flex-col items-center gap-1.5 p-2 hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-xl transition-colors"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Destination</a
         >
-          <i
-            data-lucide="book-open"
-            class="w-[28px] h-[28px] text-gray-700 dark:text-gray-300"
-          ></i>
-          <span
-            class="text-[14px] font-semibold text-[#003d3d] dark:text-gray-200"
-            >Visa</span
-          >
-        </a>
         <a
           href="#"
-          class="flex flex-col items-center gap-1.5 p-2 hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-xl transition-colors"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Offers</a
         >
-          <i
-            data-lucide="gift"
-            class="w-[28px] h-[28px] text-gray-700 dark:text-gray-300"
-          ></i>
-          <span
-            class="text-[14px] font-semibold text-[#003d3d] dark:text-gray-200"
-            >Gift Card</span
-          >
-        </a>
-      </div>
-
-      <!-- ====== MOBILE MODAL (hidden by default, shown on click) ====== -->
-      <div
-        id="countryModal"
-        class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-0 sm:p-4 overflow-hidden hidden"
-      >
-        <div
-          class="bg-white dark:bg-gray-800 w-full h-full sm:h-auto sm:max-w-md sm:max-h-[90vh] rounded-none sm:rounded-2xl shadow-2xl flex flex-col overflow-hidden min-h-0 animate-in fade-in zoom-in-95 duration-200"
+        <a
+          href="#"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Insurance</a
         >
-          <div
-            class="flex items-center justify-between px-5 py-4 border-b border-gray-100 dark:border-gray-700 shrink-0"
-          >
-            <h3 class="text-[21px] font-bold text-gray-900 dark:text-white">
-              Select the Preferred Option
-            </h3>
-            <button
-              id="closeCountryModal"
-              class="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-300 hover:bg-gray-200 transition-colors cursor-pointer shrink-0"
-            >
-              <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-          </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 shrink-0"
-          >
-            <div
-              class="grid grid-cols-3 gap-1 bg-gray-100 dark:bg-gray-700 p-1 rounded-xl"
-            >
-              <button
-                data-tab="country"
-                class="tab-btn active py-2.5 text-[16px] font-bold rounded-lg bg-[#009a9a] text-white shadow-sm transition-all cursor-pointer"
-              >
-                Country
-              </button>
-              <button
-                data-tab="currency"
-                class="tab-btn py-2.5 text-[16px] font-semibold rounded-lg text-gray-600 dark:text-gray-300 hover:text-white transition-all cursor-pointer"
-              >
-                Currency
-              </button>
-              <button
-                data-tab="language"
-                class="tab-btn py-2.5 text-[16px] font-semibold rounded-lg text-gray-600 dark:text-gray-300 hover:text-white transition-all cursor-pointer"
-              >
-                Language
-              </button>
-            </div>
-          </div>
-          <div
-            class="px-5 py-3 overflow-y-auto overflow-x-hidden flex-1 min-h-0"
-          >
-            <!-- Country -->
-            <div id="countryContent" class="space-y-4">
-              <h4 class="text-[17px] font-bold text-gray-900 dark:text-white">
-                Choose Country
-              </h4>
-              <div class="space-y-1">
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <div class="flex items-center gap-3 min-w-0">
-                    <svg
-                      class="w-7 h-5 rounded-[2px] shadow-2xs shrink-0"
-                      viewBox="0 0 640 480"
-                    >
-                      <path fill="#f93" d="M0 0h640v160H0z" />
-                      <path fill="#fff" d="M0 160h640v160H0z" />
-                      <path fill="#128807" d="M0 320h640v160H0z" />
-                      <circle
-                        cx="320"
-                        cy="240"
-                        r="60"
-                        fill="none"
-                        stroke="#008"
-                        stroke-width="12"
-                      />
-                    </svg>
-                    <span
-                      class="text-[18px] font-medium text-gray-800 dark:text-gray-200 truncate"
-                      >India</span
-                    >
-                  </div>
-                  <input
-                    type="radio"
-                    name="modal-country"
-                    checked
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <div class="flex items-center gap-3 min-w-0">
-                    <svg
-                      class="w-7 h-5 rounded-[2px] shadow-2xs shrink-0"
-                      viewBox="0 0 640 480"
-                    >
-                      <path fill="#00732f" d="M0 0h640v160H0z" />
-                      <path fill="#fff" d="M0 160h640v160H0z" />
-                      <path d="M0 320h640v160H0z" />
-                      <path fill="red" d="M0 0h220v480H0z" />
-                    </svg>
-                    <span
-                      class="text-[18px] font-medium text-gray-800 dark:text-gray-200 truncate"
-                      >UAE</span
-                    >
-                  </div>
-                  <input
-                    type="radio"
-                    name="modal-country"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <div class="flex items-center gap-3 min-w-0">
-                    <svg
-                      class="w-7 h-5 rounded-[2px] shadow-2xs shrink-0"
-                      viewBox="0 0 640 480"
-                    >
-                      <path fill="#012169" d="M0 0h640v480H0z" />
-                      <path
-                        fill="#FFF"
-                        d="M75 0l245 180L565 0h75v50L415 235l225 170v75h-75L320 310 75 480H0v-75l225-170L0 65V0h75z"
-                      />
-                      <path
-                        fill="#C8102E"
-                        d="M0 0l225 170H0V0zm640 0L415 170h225V0zM0 480l225-170H0v170zm640 0L415 310h225v170z"
-                      />
-                    </svg>
-                    <span
-                      class="text-[18px] font-medium text-gray-800 dark:text-gray-200 truncate"
-                      >United Kingdom</span
-                    >
-                  </div>
-                  <input
-                    type="radio"
-                    name="modal-country"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <div class="flex items-center gap-3 min-w-0">
-                    <svg
-                      class="w-7 h-5 rounded-[2px] shadow-2xs shrink-0"
-                      viewBox="0 0 640 480"
-                    >
-                      <path fill="#da251d" d="M0 0h640v480H0z" />
-                      <path fill="#fff" d="M0 80h640v320H0z" />
-                      <path fill="#241d4f" d="M0 160h640v160H0z" />
-                    </svg>
-                    <span
-                      class="text-[18px] font-medium text-gray-800 dark:text-gray-200 truncate"
-                      >Thailand</span
-                    >
-                  </div>
-                  <input
-                    type="radio"
-                    name="modal-country"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <div class="flex items-center gap-3 min-w-0">
-                    <svg
-                      class="w-7 h-5 rounded-[2px] shadow-2xs shrink-0"
-                      viewBox="0 0 640 480"
-                    >
-                      <path fill="#bd3d44" d="M0 0h640v480H0z" />
-                      <path
-                        stroke="#fff"
-                        stroke-width="37"
-                        d="M0 55h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"
-                      />
-                      <path fill="#192f5d" d="M0 0h364v259H0z" />
-                    </svg>
-                    <span
-                      class="text-[18px] font-medium text-gray-800 dark:text-gray-200 truncate"
-                      >US</span
-                    >
-                  </div>
-                  <input
-                    type="radio"
-                    name="modal-country"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-              </div>
-            </div>
-            <!-- Currency -->
-            <div id="currencyContent" class="space-y-4" style="display: none">
-              <h4 class="text-[17px] font-bold text-gray-900 dark:text-white">
-                Choose Currency
-              </h4>
-              <div class="space-y-1">
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <div class="flex items-center gap-3 min-w-0">
-                    <span
-                      class="text-[18px] font-medium text-gray-800 dark:text-gray-200"
-                      >Indian Rupee</span
-                    >
-                    <span
-                      class="text-[21px] font-semibold text-gray-600 dark:text-gray-300"
-                      >₹</span
-                    >
-                  </div>
-                  <input
-                    type="radio"
-                    name="modal-currency"
-                    checked
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <div class="flex items-center gap-3 min-w-0">
-                    <span
-                      class="text-[18px] font-medium text-gray-800 dark:text-gray-200"
-                      >UAE Dirham</span
-                    >
-                    <span
-                      class="text-[21px] font-semibold text-gray-600 dark:text-gray-300"
-                      >AED</span
-                    >
-                  </div>
-                  <input
-                    type="radio"
-                    name="modal-currency"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <div class="flex items-center gap-3 min-w-0">
-                    <span
-                      class="text-[18px] font-medium text-gray-800 dark:text-gray-200"
-                      >Baht</span
-                    >
-                    <span
-                      class="text-[21px] font-semibold text-gray-600 dark:text-gray-300"
-                      >B</span
-                    >
-                  </div>
-                  <input
-                    type="radio"
-                    name="modal-currency"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <div class="flex items-center gap-3 min-w-0">
-                    <span
-                      class="text-[18px] font-medium text-gray-800 dark:text-gray-200"
-                      >British Pound</span
-                    >
-                    <span
-                      class="text-[21px] font-semibold text-gray-600 dark:text-gray-300"
-                      >£</span
-                    >
-                  </div>
-                  <input
-                    type="radio"
-                    name="modal-currency"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <div class="flex items-center gap-3 min-w-0">
-                    <span
-                      class="text-[18px] font-medium text-gray-800 dark:text-gray-200"
-                      >US Dollar</span
-                    >
-                    <span
-                      class="text-[21px] font-semibold text-gray-600 dark:text-gray-300"
-                      >$</span
-                    >
-                  </div>
-                  <input
-                    type="radio"
-                    name="modal-currency"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-              </div>
-            </div>
-            <!-- Language -->
-            <div id="languageContent" class="space-y-4" style="display: none">
-              <h4 class="text-[17px] font-bold text-gray-900 dark:text-white">
-                Choose Language
-              </h4>
-              <div class="space-y-1">
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <span
-                    class="text-[18px] font-medium text-gray-800 dark:text-gray-200"
-                    >English</span
-                  >
-                  <input
-                    type="radio"
-                    name="modal-language"
-                    checked
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <span
-                    class="text-[18px] font-medium text-gray-800 dark:text-gray-200"
-                    >Hindi</span
-                  >
-                  <input
-                    type="radio"
-                    name="modal-language"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <span
-                    class="text-[18px] font-medium text-gray-800 dark:text-gray-200"
-                    >Arabic</span
-                  >
-                  <input
-                    type="radio"
-                    name="modal-language"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-                <label
-                  class="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                >
-                  <span
-                    class="text-[18px] font-medium text-gray-800 dark:text-gray-200"
-                    >Thai</span
-                  >
-                  <input
-                    type="radio"
-                    name="modal-language"
-                    class="w-5 h-5 text-[#009a9a] accent-[#009a9a] cursor-pointer shrink-0"
-                  />
-                </label>
-              </div>
-            </div>
-          </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 shrink-0"
-          >
-            <button
-              id="applyCountryModal"
-              class="w-full bg-[#009a9a] hover:bg-[#007a7a] text-white text-[18px] font-bold py-3.5 rounded-xl shadow-lg transition-all cursor-pointer"
-            >
-              APPLY
-            </button>
-          </div>
-        </div>
+        <a
+          href="#"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Blog</a
+        >
+        <a
+          href="#"
+          class="text-[#007a7a] hover:text-[#009a9a] transition-colors duration-200"
+          >Contact</a
+        >
       </div>
     </header>
 
@@ -1316,7 +403,7 @@
       startTimer();
     </script>
     <!--Hero Section End-->
-    <!--Feature deal Section Start-->
+    <!--Popular Packages Section Start-->
     <section
       class="w-full bg-white dark:bg-gray-900 py-8 sm:py-10 px-4 sm:px-6 transition-colors relative"
     >
@@ -1328,7 +415,7 @@
           <h2
             class="text-[20px] sm:text-[35px] font-extrabold text-black dark:text-white sm:text-center"
           >
-            Exclusive Offers
+            Popular Packages
           </h2>
           <a
             href="#"
@@ -1351,7 +438,7 @@
           </a>
         </div>
 
-        <!-- ===== FILTER PILLS ===== -->
+        <!-- ===== FILTER PILLS (age er moto) ===== -->
         <div
           class="flex items-center justify-start sm:justify-center gap-2 md:gap-2 py-2 px-1 overflow-x-auto flex-nowrap sm:flex-wrap w-full [&::-webkit-scrollbar]:hidden"
         >
@@ -1359,56 +446,50 @@
             type="button"
             class="px-4 py-1.5 rounded-lg sm:rounded-full font-medium text-[14px] sm:text-[15px] bg-[#007a7a] text-white border border-[#007a7a] cursor-pointer shadow-sm flex-shrink-0 transition-all hover:bg-opacity-90"
           >
-            Best Offers
+            All Packages
           </button>
           <button
             type="button"
             class="px-4 py-1.5 rounded-lg sm:rounded-full font-medium text-[14px] sm:text-[15px] text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 cursor-pointer hover:text-[#007a7a] hover:border-[#007a7a] hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors flex-shrink-0"
           >
-            Bank Offers
+            Domestic
           </button>
           <button
             type="button"
             class="px-4 py-1.5 rounded-lg sm:rounded-full font-medium text-[14px] sm:text-[15px] text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 cursor-pointer hover:text-[#007a7a] hover:border-[#007a7a] hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors flex-shrink-0"
           >
-            Flights
+            Honeymoon
           </button>
           <button
             type="button"
             class="px-4 py-1.5 rounded-lg sm:rounded-full font-medium text-[14px] sm:text-[15px] text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 cursor-pointer hover:text-[#007a7a] hover:border-[#007a7a] hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors flex-shrink-0"
           >
-            Hotel
+            Family
           </button>
           <button
             type="button"
             class="px-4 py-1.5 rounded-lg sm:rounded-full font-medium text-[14px] sm:text-[15px] text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 cursor-pointer hover:text-[#007a7a] hover:border-[#007a7a] hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors flex-shrink-0"
           >
-            Bus
+            Adventure
           </button>
           <button
             type="button"
             class="px-4 py-1.5 rounded-lg sm:rounded-full font-medium text-[14px] sm:text-[15px] text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 cursor-pointer hover:text-[#007a7a] hover:border-[#007a7a] hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors flex-shrink-0"
           >
-            Holidays
-          </button>
-          <button
-            type="button"
-            class="px-4 py-1.5 rounded-lg sm:rounded-full font-medium text-[14px] sm:text-[15px] text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 cursor-pointer hover:text-[#007a7a] hover:border-[#007a7a] hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors flex-shrink-0"
-          >
-            Cabs
+            Hill Station
           </button>
           <a
             href="#"
             class="px-4 py-1.5 rounded-lg sm:rounded-full font-medium text-[14px] sm:text-[15px] text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 cursor-pointer hover:text-[#007a7a] hover:border-[#007a7a] hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors flex-shrink-0 ml-1"
           >
-            View All Offers
+            View All Packages
           </a>
         </div>
       </div>
 
       <!-- ===== SLIDER CONTAINER ===== -->
       <div class="max-w-[1200px] mx-auto mt-6 sm:mt-8 relative px-1 sm:px-0">
-        <!-- Left Arrow – hidden on mobile -->
+        <!-- Left Arrow -->
         <button
           type="button"
           id="slideLeft"
@@ -1436,7 +517,7 @@
           style="scrollbar-width: none; -ms-overflow-style: none"
           class="flex items-stretch gap-2 sm:gap-4 md:gap-5 overflow-x-auto pb-2 px-0.5 scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
         >
-          <!-- ===== CARD 1: Luxury Hotel Stay ===== -->
+          <!-- ===== CARD 1: Darjeeling Delight ===== -->
           <div
             class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
           >
@@ -1444,8 +525,8 @@
               class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
             >
               <img
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80"
-                alt="Hotel Offer"
+                src="https://images.unsplash.com/photo-1544413660-299165566b1d?auto=format&fit=crop&w=600&q=80"
+                alt="Darjeeling Package"
                 class="w-full h-full object-cover"
               />
               <div class="absolute top-2 left-2 sm:hidden z-10">
@@ -1456,7 +537,7 @@
                     box-shadow: 0 2px 12px rgba(230, 57, 70, 0.5);
                   "
                 >
-                  HDF
+                  HOT
                 </span>
               </div>
               <div
@@ -1464,7 +545,7 @@
               >
                 <span
                   class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
-                  >Luxury Hotel Stay</span
+                  >Darjeeling Delight</span
                 >
               </div>
             </div>
@@ -1472,13 +553,14 @@
               <p
                 class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
               >
-                Get up to 40% OFF on luxury 5-star hotel bookings worldwide.
+                3N/4D toy train ride, Tiger Hill sunrise, tea garden & Mall
+                Road.
               </p>
               <div
                 class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
               >
                 <span class="text-[9px] sm:text-xs text-gray-400"
-                  >T&C Apply</span
+                  >From ₹8,999</span
                 >
                 <a
                   href="#"
@@ -1489,13 +571,13 @@
                 <span
                   class="inline-flex sm:hidden text-[9px] font-semibold uppercase tracking-wide text-white bg-green-700 px-2 py-0.5 rounded-full"
                 >
-                  Valid
+                  4D/3N
                 </span>
               </div>
             </div>
           </div>
 
-          <!-- ===== CARD 2: HDFC Bank Special ===== -->
+          <!-- ===== CARD 2: Gangtok Getaway ===== -->
           <div
             class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
           >
@@ -1503,8 +585,8 @@
               class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
             >
               <img
-                src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80"
-                alt="Bank Offer"
+                src="https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=600&q=80"
+                alt="Gangtok Package"
                 class="w-full h-full object-cover"
               />
               <div
@@ -1512,7 +594,7 @@
               >
                 <span
                   class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
-                  >HDFC Bank Special</span
+                  >Gangtok Getaway</span
                 >
               </div>
             </div>
@@ -1520,56 +602,13 @@
               <p
                 class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
               >
-                Flat 20% instant discount using HDFC Credit and Debit cards.
+                3N/4D MG Marg, Tsomgo Lake, Baba Mandir & Ropeway ride.
               </p>
               <div
                 class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
               >
                 <span class="text-[9px] sm:text-xs text-gray-400"
-                  >Valid till 30th Sep</span
-                >
-                <a
-                  href="#"
-                  class="text-[#007a7a] dark:text-teal-400 font-bold text-[10px] sm:text-sm flex items-center gap-1 hover:underline"
-                >
-                  KNOW MORE →
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- ===== CARD 3: Bus Travel Deals ===== -->
-          <div
-            class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
-          >
-            <div
-              class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80"
-                alt="Bus Offer"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2 sm:p-4"
-              >
-                <span
-                  class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
-                  >Bus Travel Deals</span
-                >
-              </div>
-            </div>
-            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
-              <p
-                class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
-              >
-                Save up to Rs. 250 on AC luxury bus tickets across India.
-              </p>
-              <div
-                class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
-              >
-                <span class="text-[9px] sm:text-xs text-gray-400"
-                  >Use Code: BUS250</span
+                  >From ₹9,499</span
                 >
                 <a
                   href="#"
@@ -1581,7 +620,7 @@
             </div>
           </div>
 
-          <!-- ===== CARD 4: Exotic Maldives Tour ===== -->
+          <!-- ===== CARD 3: North Sikkim Explorer ===== -->
           <div
             class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
           >
@@ -1589,8 +628,8 @@
               class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
             >
               <img
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
-                alt="Holiday Offer"
+                src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=600&q=80"
+                alt="North Sikkim Package"
                 class="w-full h-full object-cover"
               />
               <div
@@ -1598,7 +637,7 @@
               >
                 <span
                   class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
-                  >Exotic Maldives Tour</span
+                  >North Sikkim Explorer</span
                 >
               </div>
             </div>
@@ -1606,14 +645,14 @@
               <p
                 class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
               >
-                Book 4N/5D Maldives holiday package with resort stay &
-                transfers.
+                5N/6D Lachen, Lachung, Yumthang Valley & Zero Point snow
+                adventure.
               </p>
               <div
                 class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
               >
                 <span class="text-[9px] sm:text-xs text-gray-400"
-                  >Starting @ ₹39,999</span
+                  >From ₹15,999</span
                 >
                 <a
                   href="#"
@@ -1625,7 +664,7 @@
             </div>
           </div>
 
-          <!-- ===== CARD 5: Outstation Cabs ===== -->
+          <!-- ===== CARD 4: Pelling Peace ===== -->
           <div
             class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
           >
@@ -1633,8 +672,8 @@
               class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
             >
               <img
-                src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80"
-                alt="Cab Offer"
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80"
+                alt="Pelling Package"
                 class="w-full h-full object-cover"
               />
               <div
@@ -1642,7 +681,7 @@
               >
                 <span
                   class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
-                  >Outstation Cabs</span
+                  >Pelling Peace</span
                 >
               </div>
             </div>
@@ -1650,14 +689,13 @@
               <p
                 class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
               >
-                Get flat 15% off on outstation cab bookings and airport
-                transfers.
+                3N/4D Pemayangtse Monastery, Kanchenjunga Falls & Sky Walk.
               </p>
               <div
                 class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
               >
                 <span class="text-[9px] sm:text-xs text-gray-400"
-                  >Safe & Secure</span
+                  >From ₹10,499</span
                 >
                 <a
                   href="#"
@@ -1669,7 +707,7 @@
             </div>
           </div>
 
-          <!-- ===== CARD 6: Weekend Getaways ===== -->
+          <!-- ===== CARD 5: Bhutan Happiness Tour ===== -->
           <div
             class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
           >
@@ -1677,8 +715,8 @@
               class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
             >
               <img
-                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80"
-                alt="Weekend Offer"
+                src="https://images.unsplash.com/photo-1553856622-d1b352e9a211?auto=format&fit=crop&w=600&q=80"
+                alt="Bhutan Package"
                 class="w-full h-full object-cover"
               />
               <div
@@ -1686,7 +724,7 @@
               >
                 <span
                   class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
-                  >Weekend Getaways</span
+                  >Bhutan Happiness Tour</span
                 >
               </div>
             </div>
@@ -1694,142 +732,13 @@
               <p
                 class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
               >
-                Explore hidden hills and serene nature resorts near your city.
+                4N/5D Thimphu, Paro, Tiger's Nest Monastery & Punakha Dzong.
               </p>
               <div
                 class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
               >
                 <span class="text-[9px] sm:text-xs text-gray-400"
-                  >Special Rates</span
-                >
-                <a
-                  href="#"
-                  class="text-[#007a7a] dark:text-teal-400 font-bold text-[10px] sm:text-sm flex items-center gap-1 hover:underline"
-                >
-                  VIEW DEAL →
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- ===== CARD 7: Easy Visa Services ===== -->
-          <div
-            class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
-          >
-            <div
-              class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80"
-                alt="Visa Offer"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2 sm:p-4"
-              >
-                <span
-                  class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
-                  >Easy Visa Services</span
-                >
-              </div>
-            </div>
-            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
-              <p
-                class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
-              >
-                Hassle-free international visa processing with expert guidance.
-              </p>
-              <div
-                class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
-              >
-                <span class="text-[9px] sm:text-xs text-gray-400"
-                  >Fast Approval</span
-                >
-                <a
-                  href="#"
-                  class="text-[#007a7a] dark:text-teal-400 font-bold text-[10px] sm:text-sm flex items-center gap-1 hover:underline"
-                >
-                  APPLY NOW →
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- ===== CARD 8: ICICI Bank Rewards ===== -->
-          <div
-            class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
-          >
-            <div
-              class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&q=80"
-                alt="Credit Card Offer"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2 sm:p-4"
-              >
-                <span
-                  class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
-                  >ICICI Bank Rewards</span
-                >
-              </div>
-            </div>
-            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
-              <p
-                class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
-              >
-                Earn 5x reward points on all travel and hotel bookings.
-              </p>
-              <div
-                class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
-              >
-                <span class="text-[9px] sm:text-xs text-gray-400"
-                  >Limited Period</span
-                >
-                <a
-                  href="#"
-                  class="text-[#007a7a] dark:text-teal-400 font-bold text-[10px] sm:text-sm flex items-center gap-1 hover:underline"
-                >
-                  CLAIM →
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- ===== CARD 9: Cozy Homestays ===== -->
-          <div
-            class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
-          >
-            <div
-              class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
-                alt="Homestay Offer"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2 sm:p-4"
-              >
-                <span
-                  class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
-                  >Cozy Homestays</span
-                >
-              </div>
-            </div>
-            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
-              <p
-                class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
-              >
-                Experience local living with handpicked villas and homestays.
-              </p>
-              <div
-                class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
-              >
-                <span class="text-[9px] sm:text-xs text-gray-400"
-                  >Up to 30% Off</span
+                  >From ₹22,999</span
                 >
                 <a
                   href="#"
@@ -1841,7 +750,7 @@
             </div>
           </div>
 
-          <!-- ===== CARD 10: Activities & Passes ===== -->
+          <!-- ===== CARD 6: Kalimpong Hills ===== -->
           <div
             class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
           >
@@ -1849,8 +758,8 @@
               class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
             >
               <img
-                src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80"
-                alt="Activities Offer"
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80"
+                alt="Kalimpong Package"
                 class="w-full h-full object-cover"
               />
               <div
@@ -1858,7 +767,7 @@
               >
                 <span
                   class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
-                  >Activities & Passes</span
+                  >Kalimpong Hills</span
                 >
               </div>
             </div>
@@ -1866,27 +775,199 @@
               <p
                 class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
               >
-                Get buy 1 get 1 free on amusement park tickets and sightseeing
-                tours.
+                2N/3D Deolo Hill, Durpin Monastery, flower nurseries & river
+                rafting.
               </p>
               <div
                 class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
               >
                 <span class="text-[9px] sm:text-xs text-gray-400"
-                  >Instant Voucher</span
+                  >From ₹6,499</span
                 >
                 <a
                   href="#"
                   class="text-[#007a7a] dark:text-teal-400 font-bold text-[10px] sm:text-sm flex items-center gap-1 hover:underline"
                 >
                   BOOK NOW →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== CARD 7: Lachung Snow Valley ===== -->
+          <div
+            class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
+          >
+            <div
+              class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=600&q=80"
+                alt="Lachung Package"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2 sm:p-4"
+              >
+                <span
+                  class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
+                  >Lachung Snow Valley</span
+                >
+              </div>
+            </div>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <p
+                class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
+              >
+                3N/4D snow-covered Lachung, Yumthang & hot spring relaxation.
+              </p>
+              <div
+                class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
+              >
+                <span class="text-[9px] sm:text-xs text-gray-400"
+                  >From ₹12,999</span
+                >
+                <a
+                  href="#"
+                  class="text-[#007a7a] dark:text-teal-400 font-bold text-[10px] sm:text-sm flex items-center gap-1 hover:underline"
+                >
+                  EXPLORE →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== CARD 8: Tsomgo Lake Day Trip ===== -->
+          <div
+            class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
+          >
+            <div
+              class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=600&q=80"
+                alt="Tsomgo Lake Package"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2 sm:p-4"
+              >
+                <span
+                  class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
+                  >Tsomgo Lake Day Trip</span
+                >
+              </div>
+            </div>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <p
+                class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
+              >
+                1N/2D glacial lake, yak ride, Baba Harbhajan Singh Mandir.
+              </p>
+              <div
+                class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
+              >
+                <span class="text-[9px] sm:text-xs text-gray-400"
+                  >From ₹4,999</span
+                >
+                <a
+                  href="#"
+                  class="text-[#007a7a] dark:text-teal-400 font-bold text-[10px] sm:text-sm flex items-center gap-1 hover:underline"
+                >
+                  BOOK NOW →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== CARD 9: Ravangla Buddha Park ===== -->
+          <div
+            class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
+          >
+            <div
+              class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80"
+                alt="Ravangla Package"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2 sm:p-4"
+              >
+                <span
+                  class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
+                  >Ravangla Buddha Park</span
+                >
+              </div>
+            </div>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <p
+                class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
+              >
+                2N/3D Buddha Park, Ralang Monastery, Maenam Hill & tea gardens.
+              </p>
+              <div
+                class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
+              >
+                <span class="text-[9px] sm:text-xs text-gray-400"
+                  >From ₹7,499</span
+                >
+                <a
+                  href="#"
+                  class="text-[#007a7a] dark:text-teal-400 font-bold text-[10px] sm:text-sm flex items-center gap-1 hover:underline"
+                >
+                  EXPLORE →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== CARD 10: Silk Route Zuluk ===== -->
+          <div
+            class="w-[55vw] max-w-[55vw] sm:w-[280px] sm:max-w-[280px] md:w-[300px] md:max-w-[300px] lg:w-[320px] lg:max-w-[320px] flex-shrink-0 snap-start mx-0.5 sm:mx-0 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col min-h-[250px] sm:min-h-[auto]"
+          >
+            <div
+              class="relative h-[110px] sm:h-[160px] w-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=600&q=80"
+                alt="Zuluk Package"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2 sm:p-4"
+              >
+                <span
+                  class="text-white font-bold text-sm sm:text-lg drop-shadow-md"
+                  >Silk Route Zuluk</span
+                >
+              </div>
+            </div>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <p
+                class="text-gray-600 dark:text-gray-300 text-[11px] sm:text-sm mb-2 line-clamp-2"
+              >
+                3N/4D historic Silk Route, Thambi View Point & zig-zag road.
+              </p>
+              <div
+                class="flex items-center justify-between pt-1.5 border-t border-gray-100 dark:border-gray-700 mt-auto"
+              >
+                <span class="text-[9px] sm:text-xs text-gray-400"
+                  >From ₹9,999</span
+                >
+                <a
+                  href="#"
+                  class="text-[#007a7a] dark:text-teal-400 font-bold text-[10px] sm:text-sm flex items-center gap-1 hover:underline"
+                >
+                  EXPLORE →
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Arrow – hidden on mobile -->
+        <!-- Right Arrow -->
         <button
           type="button"
           id="slideRight"
@@ -1910,7 +991,7 @@
       </div>
     </section>
 
-    <!--Feature deal Section End-->
+    <!--Popular Packages Section End-->
 
     <!-- Offer-Slider-Start -->
     <section
